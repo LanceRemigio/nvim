@@ -1,0 +1,30 @@
+return require'packer'.startup(function()
+	use 'wbthomason/packer.nvim'
+	use 'williamboman/nvim-lsp-installer'
+	use 'neovim/nvim-lspconfig'
+  use 'glepnir/dashboard-nvim'
+	-- themes 
+	use 'folke/tokyonight.nvim'
+	use 'sainnhe/sonokai'
+	use 'EdenEast/nightfox.nvim'
+	-- functionality
+	use 'nvim-lualine/lualine.nvim'
+	use 'ryanoasis/vim-devicons'
+	use 'nvim-tree/nvim-tree.lua'
+	use 'nvim-lua/plenary.nvim'
+	use 'nvim-telescope/telescope.nvim'
+	use 'nvim-telescope/telescope-file-browser.nvim'
+	use 'nvim-treesitter/nvim-treesitter'
+	use 'junegunn/fzf'
+	use 'junegunn/fzf.vim'
+	-- tools 
+	use 'tpope/vim-commentary'
+	use 'neoclide/coc.nvim'
+	use 'kyazdani42/nvim-web-devicons'
+  use 'sheerun/vim-polyglot'
+	use 'SirVer/ultisnips'
+	use 'romgrk/barbar.nvim'
+	use 'matze/vim-tex-fold'
+	use 'Pocco81/auto-save.nvim'
+	use 'lervag/vimtex'
+end)
