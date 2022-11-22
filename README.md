@@ -1,9 +1,6 @@
 # config.nvim
 Remote backup of my neovim setup! This setup is optimized for writing notes and doing homework in LaTeX. 
 
-
-# 
-
 * OS: Ubuntu 22.04
 * Termimal: Alacritty
 * Font: JetBrains Mono Nerd Font https://www.nerdfonts.com/font-downloads
