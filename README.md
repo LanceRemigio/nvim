@@ -16,5 +16,3 @@ Remote backup of my neovim setup! This setup is optimized for writing notes and 
 I use Alacritty for my terminal emulator and I like to use Zathura for pdf viewing for my LaTex documents. 
 
 
-
-
