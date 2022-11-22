@@ -1,0 +1,190 @@
+snippet note "template for document"
+
+
+\documentclass[12pt]{book}
+\usepackage{amsmath,amsthm,amssymb,hyperref,enumitem,tcolorbox}
+
+\setlength{\headheight}{15pt}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{cor}{Corollary}[thm]
+\newtheorem{lem}{Lemma}[section]
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+\newtheorem*{rem}{Remark}
+\newtheorem*{ex}{Example}
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\title{$1notes}
+\author{Lance Remigio}
+\begin{document}
+\maketitle
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\nouppercase{\rightmark\hfill\leftmark}}
+\fancyhead[RO]{\nouppercase{\leftmark\hfill\rightmark}}
+\fancyfoot[LE,RO]{\hfill\thepage\hfill}
+
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[LO,CE]{Lance Remigio}
+
+
+\end{document}
+
+endsnippet
+
+
+snippet \ "math mode"
+\($1\)
+endsnippet
+
+
+snippet \\ "math display mode"
+\[$1\]
+endsnippet
+
+snippet prf "proof"
+\begin{proof}
+$1
+\end{proof}
+endsnippet
+
+snippet emp "empty set"
+\emptyset$0
+endsnippet 
+
+snippet abs "absolute value signs"
+\Big| $0 \Big|
+endsnippet
+
+snippet box "tcolorbox"
+\begin{tcolorbox}
+$1
+\end{tcolorbox}
+endsnippet 
+
+snippet mns "minus"
+\setminus$0
+endsnippet
+
+snippet inf "infinity"
+\infty$0
+endsnippet
+
+snippet sq "square root"
+\sqrt{$1}
+endsnippet
+
+snippet e "epsilon"
+\epsilon 
+endsnippet 
+
+
+snippet set "set notation"
+\\{ $0 \\}
+endsnippet
+
+snippet cup "union"
+\bigcup_{$1}^{$2}$0
+endsnippet 
+
+
+snippet cap "union"
+\bigcap_{$1}^{$2}$0
+endsnippet 
+
+
+snippet ff "fraction notation"
+\frac{$1}{$2}$0
+endsnippet
+
+snippet alg "align environment"
+\begin{align*}
+$1&=$2 \\
+\end{align*}
+endsnippet 
+
+snippet en "enumerate environment"
+\begin{enumerate}
+\item$1
+\end{enumerate}
+endsnippet
+
+snippet cs "cases"
+\begin{cases}
+$1\\
+\end{cases}
+endsnippet
+
+snippet bld "bold text"
+\textbf{$1}
+endsnippet
+
+snippet it "italic text"
+\textit{$1}
+endsnippet
+
+snippet itm "itemize environment"
+\begin{itemize}
+\item$1
+\end{itemize}
+endsnippet
+
+snippet thm "theorem environment"
+\begin{tcolorbox}
+\begin{thm}
+$1
+\end{thm}
+\end{tcolorbox}
+endsnippet
+
+
+snippet def "definition environment"
+\begin{tcolorbox}
+\begin{defn}
+$1
+\end{defn}
+\end{tcolorbox}
+endsnippet
+
+
+snippet cor "corollary"
+\begin{tcolorbox}
+\begin{cor}
+$1
+\end{cor}
+\end{tcolorbox}
+endsnippet
+
+
+snippet ex "example"
+\begin{ex}
+$1
+\end{ex}
+endsnippet
+
+
+
+
+snippet derv "derivative"
+\frac{d$1}{d$2}$0
+endsnippet
+
+snippet par "partial derivative"
+\frac{\partial$1}{\partial $2}$0
+endsnippet
+
+
+snippet int "integral"
+\int_{$1}^{$2} d$0
+endsnippet
