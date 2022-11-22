@@ -2,6 +2,13 @@
 Remote backup of my neovim setup! This setup is optimized for writing notes and doing homework in LaTeX. 
 
 
+# 
+
+* OS: Ubuntu 22.04
+* Termimal: Alacritty
+* Font: JetBrains Mono Nerd Font https://www.nerdfonts.com/font-downloads
+* Colorscheme: Nightfox https://github.com/EdenEast/nightfox.nvim
+* PDF Viewer: Zathura (or SumatraPDF if you're on Windows)
 
 # Screenshots
 
@@ -10,9 +17,5 @@ Remote backup of my neovim setup! This setup is optimized for writing notes and 
 
 ![Screenshot from 2022-11-21 18-15-34](https://user-images.githubusercontent.com/102345313/203200921-96781aaa-5885-4742-8ce2-a5089a5f8b51.png)
 
-
-# What I use in addition to Neovim
-
-I use Alacritty for my terminal emulator and I like to use Zathura for pdf viewing for my LaTex documents. 
 
 
