@@ -26,7 +26,7 @@ km('n', '<leader>ff', ':Telescope find_files<cr>', opts)
 km('n', '<leader>fg', ':Telescope live_grep<cr>', opts)
 km('n', '<leader>tb', ':Telescope buffers<cr>', opts)
 km('n', '<leader>fh', ':Telescope help_tags<cr>', opts)
-km('n', '<leader>fb', ':Telescope file_browser<cr>', {noremap = true})
+
 --nvim-tree
 
 
@@ -46,8 +46,8 @@ km('n', '<leader>e',  ':BufferClose<CR>', opts)
 
 --move to previous/next 
 
-km('n', '<C-Right>', ':BufferNext<CR>', opts)
-km('n', '<C-Left>', ':BufferPrevious<CR>', opts)
+km('n', '<C-h>', ':BufferNext<CR>', opts)
+km('n', '<C-h>', ':BufferPrevious<CR>', opts)
 
 
 -- Python 
@@ -57,7 +57,6 @@ km('n', '<leader>a', ':botright 10sp <CR> :term python3 % <CR>', {noremap = true
 -- latex 
 --
 km('n', '<leader>c', ':VimtexCompile<CR>', {noremap = true})
-km('n', '<leader>lp', ':LLPStartPreview<CR>', {noremap = true})
 
 -- snippets 
 km('n', '<leader>us', ':UltiSnipsEdit<cr>', {noremap = true})
