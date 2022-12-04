@@ -6,7 +6,6 @@ return require('packer').startup(function()
     use 'nvim-lua/plenary.nvim'
     use 'ryanoasis/vim-devicons'
     use 'kyazdani42/nvim-web-devicons'
-    use 'nvim-treesitter/nvim-treesitter'
     use 'nvim-lualine/lualine.nvim'
     -- Navigation
     use 'nvim-tree/nvim-tree.lua'
@@ -16,11 +15,7 @@ return require('packer').startup(function()
     use 'nvim-telescope/telescope.nvim'
     -- Themes/UI elements
     use 'glepnir/dashboard-nvim'
-    use 'folke/tokyonight.nvim'
-    use 'sainnhe/sonokai'
     use 'EdenEast/nightfox.nvim'
-    use 'catppuccin/nvim'
-    use 'savq/melange'
     -- Tools
     use 'tpope/vim-commentary'
     use 'neoclide/coc.nvim'
