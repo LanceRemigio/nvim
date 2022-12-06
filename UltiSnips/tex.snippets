@@ -2,27 +2,8 @@ snippet note "template for document"
 
 
 \documentclass[12pt]{book}
-\usepackage{amsmath,amsthm,amssymb,hyperref,enumitem,tcolorbox}
 
-\setlength{\headheight}{15pt}
-
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\F}{\mathbb{F}}
-\newcommand{\N}{\mathbb{N}}
-\usepackage{tcolorbox}
-\usepackage{graphicx}
-\newtheorem{thm}{Theorem}[section]
-\newtheorem{prop}{Proposition}[section]
-\newtheorem{cor}{Corollary}[thm]
-\newtheorem{lem}{Lemma}[section]
-\theoremstyle{definition}
-\newtheorem{defn}{Definition}[section]
-\newtheorem*{rem}{Remark}
-\newtheorem*{ex}{Example}
-\renewcommand\qedsymbol{$\blacksquare$}
+\input{.../preamble.tex}
 
 \title{$1notes}
 \author{Lance Remigio}
@@ -44,28 +25,34 @@ snippet note "template for document"
 endsnippet
 
 
-snippet \ "math mode"
-\($1\)
+snippet mm "math mode"
+\($1\)$0
 endsnippet
 
 
-snippet \\ "math display mode"
-\[$1\]
+snippet md "math display mode"
+\[$1\]$0
 endsnippet
 
 snippet prf "proof"
 \begin{proof}
 $1
 \end{proof}
+$0
 endsnippet
 
 snippet emp "empty set"
 \emptyset$0
 endsnippet 
 
-snippet abs "absolute value signs"
-\Big| $0 \Big|
+snippet babs "absolute value signs"
+\Big|$1\Big|$0
 endsnippet
+
+snippet abs "absolute value signs"
+|$1|$0
+endsnippet
+
 
 snippet box "tcolorbox"
 \begin{tcolorbox}
@@ -82,16 +69,16 @@ snippet inf "infinity"
 endsnippet
 
 snippet sq "square root"
-\sqrt{$1}
+\sqrt{$1}$0
 endsnippet
 
 snippet e "epsilon"
-\epsilon 
+\epsilon$0 
 endsnippet 
 
 
 snippet set "set notation"
-\\{ $0 \\}
+\\{$1\\}$0
 endsnippet
 
 snippet cup "union"
@@ -110,7 +97,7 @@ endsnippet
 
 snippet alg "align environment"
 \begin{align*}
-$1&=$2 \\
+$1&$2 \\\ $0
 \end{align*}
 endsnippet 
 
@@ -118,6 +105,7 @@ snippet en "enumerate environment"
 \begin{enumerate}
 \item$1
 \end{enumerate}
+$0
 endsnippet
 
 snippet cs "cases"
@@ -127,11 +115,11 @@ $1\\
 endsnippet
 
 snippet bld "bold text"
-\textbf{$1}
+\textbf{$1}$0
 endsnippet
 
 snippet it "italic text"
-\textit{$1}
+\textit{$1}$0
 endsnippet
 
 snippet itm "itemize environment"
@@ -171,20 +159,34 @@ snippet ex "example"
 \begin{ex}
 $1
 \end{ex}
+$0
 endsnippet
 
 
-
-
-snippet derv "derivative"
+snippet dd "derivative"
 \frac{d$1}{d$2}$0
 endsnippet
 
-snippet par "partial derivative"
+snippet pp "partial derivative"
 \frac{\partial$1}{\partial $2}$0
 endsnippet
 
 
 snippet int "integral"
 \int_{$1}^{$2} d$0
+endsnippet
+
+snippet sm "summation"
+\sum_{$1}^{$2} $0
+endsnippet
+
+snippet bpr "Big Parenthesis"
+\Big($1\Big)$0
+endsnippet
+
+snippet env "New LaTeX Environment"
+\begin{$1}
+	$2
+\end{$1}
+$0
 endsnippet
