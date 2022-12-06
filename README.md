@@ -31,7 +31,7 @@ sudo apt install neovim
 * Install pip and using pip, install pynvim
 * To get LaTeX up and running, you must install:
 latexmk (compiler)
-texlive-full (latex packages)
-zathura (or SumatraPDF)
+texlive-full (to use latex packages)
+zathura (pdf viewer)
 
 
