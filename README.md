@@ -4,7 +4,7 @@ Remote backup of my neovim setup! This setup is optimized for writing notes and 
 * OS: Ubuntu 22.04
 * Termimal: Alacritty
 * Font: JetBrains Mono Nerd Font https://www.nerdfonts.com/font-downloads
-* Colorscheme: Nightfox https://github.com/EdenEast/nightfox.nvim
+* Colorscheme: Onenord https://github.com/rmehri01/onenord.nvim
 * PDF Viewer: Zathura (or SumatraPDF if you're on Windows)
 
 # Startup Screen
