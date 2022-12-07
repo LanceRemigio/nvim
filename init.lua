@@ -1,7 +1,7 @@
 -- Packer manager
 require('plugins/packer-plugins') 
 require('settings')
-require('keymaps')
+require('keymap')
 -- Plugins 
 require('plugins/lualine-config')
 require('plugins/colorscheme.onenord')
