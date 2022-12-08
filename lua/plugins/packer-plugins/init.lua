@@ -22,6 +22,8 @@ return require('packer').startup(function(use)
     use 'kyazdani42/nvim-web-devicons'
     use 'nvim-lualine/lualine.nvim'
     use 'nvim-treesitter/nvim-treesitter'
+    use 'akinsho/toggleterm.nvim'
+    use 'symbols-outline.nvim'
     -- Navigation
     use 'nvim-tree/nvim-tree.lua'
     use 'romgrk/barbar.nvim'
