@@ -2,6 +2,8 @@ local km = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 local hop = require('hop')
 local directions = require('hop.hint').HintDirection
+local ls = require('luasnip')
+
 -- Saving files
 km('n', '<C-s>', ':w<CR>', opts)
 
@@ -81,6 +83,22 @@ vim.keymap.set('n', 'T', function()
   hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })
 end, {remap=true})
 
-vim.g.UltiSnipsExpandTrigger       = '<tab>'    
-vim.g.UltiSnipsJumpForwardTrigger  = '<tab>'    
-vim.g.UltiSnipsJumpBackwardTrigger = '<a-tab>' 
+vim.keymap.set( 'i', '<c-k>', function()
+        if ls.expand_or_jumpable() then
+            ls.expand_or_jump()
+        end
+    end, { noremap = true, silent = true })
+-- Jumping backwards 
+vim.keymap.set( 'i', '<c-j>', function()
+        if ls.jumpable(-1) then
+            ls.jump(-1)
+        end
+    end, { noremap = true, silent = true })
+-- listing choice of snippets to choose from
+vim.keymap.set('i', '<c-l>', function()
+        if ls.choice_active() then
+            ls.change_choice(1)
+        end
+    end)
+
+vim.keymap.set('n', '<leader><leader>s', ':source ~/.config/nvim/LuaSnip/jj<CR>', {noremap = true })
