@@ -8,7 +8,7 @@
 * PDF Viewer: Zathura (or SumatraPDF if you're on Windows)
 * lsp: https://github.com/neovim/nvim-lspconfig
 * snippets: Luasnip
-* completion: Currently using coc.nvim but will hopefully transtion into a lua based completion setup.
+* completion: nvim-cmp
 
 # Startup Screen
 ![Screenshot from 2022-11-21 18-40-22](https://user-images.githubusercontent.com/102345313/203207961-2f0a39e8-a59a-4191-b481-e77d498d44c2.png)
