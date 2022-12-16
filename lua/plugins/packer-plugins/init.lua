@@ -24,6 +24,8 @@ return require('packer').startup(function(use)
     use 'nvim-treesitter/nvim-treesitter'
     use 'akinsho/toggleterm.nvim'
     use 'symbols-outline.nvim'
+    use 'glepnir/lspsaga.nvim'
+    use 'andweeb/presence.nvim'
     -- Navigation
     use 'nvim-tree/nvim-tree.lua'
     use 'romgrk/barbar.nvim'
@@ -42,8 +44,14 @@ return require('packer').startup(function(use)
             }
         end,
     }
-    use 'neoclide/coc.nvim'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/nvim-cmp'
+    use 'windwp/nvim-autopairs'
     use 'matze/vim-tex-fold'
+    use 'L3MON4D3/Luasnip'
     use 'Pocco81/auto-save.nvim'
     use 'SirVer/ultisnips'
     use 'lervag/vimtex'
