@@ -7,7 +7,7 @@
 * Colorscheme: Onenord https://github.com/rmehri01/onenord.nvim
 * PDF Viewer: Zathura (or SumatraPDF if you're on Windows)
 * lsp: https://github.com/neovim/nvim-lspconfig
-* snippets: UltiSnips (will make a transition into luasnip in the future)
+* snippets: Luasnip
 * completion: Currently using coc.nvim but will hopefully transtion into a lua based completion setup.
 
 # Startup Screen
@@ -19,19 +19,6 @@
 # Editing a LaTeX File
 ![Screenshot from 2022-11-21 18-15-34](https://user-images.githubusercontent.com/102345313/203200921-96781aaa-5885-4742-8ce2-a5089a5f8b51.png)
 
-# Instructions
 
-* Run the following commands:
-sudo add-apt-repository ppa:neovim-ppa/unstable
-sudo apt-get update
-sudo apt install neovim
-
-* clone this repository in your .config directory
-* Install dependencies for coc.nvim using npm (install npm by using sudo apt install) and yarn install. 
-* Install pip and using pip, install pynvim
-* To get LaTeX up and running, you must install:
-latexmk (compiler)
-texlive-full (to use latex packages)
-zathura (pdf viewer)
 
 
