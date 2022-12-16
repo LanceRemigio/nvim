@@ -13,12 +13,6 @@ km('n', '<leader>q', ':q<cr>', {noremap = true})
 -- sourcing files 
 km('n', '<leader>sf', ':source %<cr>', {noremap = true})
 
--- coc.nvim completion
-
-km('i', '<cr>', [[coc#pum#visible() ? coc#pum#confirm() : "\<CR>"]], {noremap = true, silent =true  , expr = true })
-
--- enable discord presence
-km('n', '<leader>rc', ':CocCommand rpc.enable<cr>', {noremap = true})
 
 -- Telescope 
 km('n', '<leader>ff', ':Telescope find_files<cr>', opts)
@@ -42,11 +36,6 @@ km('n', '<leader>e',  ':BufferClose<CR>', opts)
 
 km('n', '<C-l>', ':BufferNext<CR>', opts)
 km('n', '<C-h>', ':BufferPrevious<CR>', opts)
-
-
--- snippets 
-km('n', '<leader>us', ':UltiSnipsEdit<cr>', {noremap = true})
-
 
 -- autosaving
 km('n', '<leader>n', ':ASToggle<CR>', {})
