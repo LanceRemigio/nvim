@@ -1,5 +1,6 @@
 local actions = require('telescope.actions')
-
+local km = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
 require('telescope').setup {
   defaults = {
     layout_config = {
@@ -49,3 +50,12 @@ require('telescope').setup {
     }
   }
 }
+
+km('n', '<leader>ff', ':Telescope find_files<cr>', opts)
+km('n', '<leader>lg', ':Telescope live_grep<cr>', opts)
+km('n', '<leader>bb', ':Telescope buffers<cr>', opts)
+km('n', '<leader>ht', ':Telescope help_tags<cr>', opts)
+km('n', '<leader>fh', ':Telescope oldfiles<cr>', opts)
+
+
+

@@ -1,36 +1,93 @@
 local ls = require('luasnip')
 local s = ls.snippet
 local sn = ls.snippet_node
-local t = ls.text_node
-local i = ls.insert_node
+-- local t = ls.text_node
+-- local i = ls.insert_node
 local f = ls.function_node
 local d = ls.dynamic_node
-local fmt = require('luasnip.extras.fmt').fmt
+-- local fmt = require('luasnip.extras.fmt').fmt
 local fmta = require('luasnip.extras.fmt').fmta
 local i = ls.insert_node
 local rep = require('luasnip.extras').rep
 
+local in_mathzone = function()
+    return vim.fn['vimtex#syntax#in_mathzone']() == 1
+end
+
 return {
-s('mm', fmta('\\(<>\\)<>', {i(1), i(0)})),
-s('md', fmta('\\[<>\\]<>', {i(1), i(0)})),
-s('bpr', fmta('\\Big(<>\\Big)<>', {i(1), i(0)})),
+s({trig = 'mm', snippetType = "autosnippet"}, fmta('\\(<>\\)<>', {i(1), i(2)})),
+
+s({trig = 'md', snippetType = "autosnippet"}, fmta('\\[<>\\]<>', {i(1), i(2)})),
+
+s({trig =  'bpr', snippetType = 'autosnippet'}, fmta('\\Big(<>\\Big)<>', {i(1), i(0)})),
+
 s('bld', fmta('\\textbf{<>}<>', {i(1), i(0)})),
+
 s('it', fmta('\\textit{<>}<>', {i(1), i(0)})),
-s('mns', fmta("\\setmminus<>", {i(1)})),
-s('ff', fmta("\\frac{<>}{<>}", {i(1), i(2)})),
-s('sq', fmta("\\sqrt{<>}<>", {i(1), i(0)})),
-s('e', fmta("\\epsilon<>", {i(0)})),
-s('st', fmta("\\{ <> \\}<>", {i(1), i(0)})),
-s('cap', fmta("\\bigcap_{<>}^{<>}<>", {i(1), i(2), i(0)})),
-s('cup', fmta("\\bigcup_{<>}^{<>}<>", {i(1), i(2), i(0)})),
-s('abs', fmta('|<>|<>',{i(1), i(0)} )),
-s('babs', fmta('\\Big|<>\\Big|<>', {i(1), i(0)})  ),
-s('lm', fmta('\\lim<>', {i(1)})),
-s('sm', fmta('\\sum_{<>}^{<>}<>', {i(1), i(2), i(0)})),
-s('sp', fmta('\\sup<>', {i(1)})),
-s('dd', fmta("\\frac{d<>}{d<>}<>", {i(1), i(2), i(0)})),
-s('pp', fmta("\\frac{\\partial<>}{\\partial<>}<>", {i(1), i(2), i(0)})),
-s('int', fmta("\\int_{<>}^{<>}<> d<>", {i(1), i(2),i(3),i(0)})),
+
+s({trig = 'sb', snippetType = 'autosnippet'}, fmta('\\subseteq<>', {i(1)}), {condition = in_mathzone}),
+
+s({trig = 'mns', snippetType = 'autosnippet'},
+fmta("\\setmminus<>", {i(1)}),
+{condition = in_mathzone}
+),
+
+s({trig = 'ff', snippetType = 'autosnippet'},
+fmta("\\frac{<>}{<>}", {i(1), i(2)}),
+{condition = in_mathzone}
+),
+
+s({trig = 'sq', snippetType = 'autosnippet'},
+fmta("\\sqrt{<>}<>", {i(1), i(2)}),
+{condition = in_mathzone}
+),
+
+s({trig = 'e', snippetType = 'autosnippet'},
+fmta("\\epsilon<>", {i(1)}),
+{condition = in_mathzone}
+),
+
+s({trig = 'st', snippetType = 'autosnippet'},
+fmta("\\{ <> \\}<>", {i(1), i(2)}),
+{condition = in_mathzone}
+),
+
+s({trig = 'cap', snippetType = 'autosnippet'},
+fmta("\\bigcap_{<>}^{<>}<>",
+{i(1), i(2), i(3)}),
+{condition = in_mathzone}),
+
+s({trig = 'cup', snippetType = 'autosnippet'}, fmta("\\bigcup_{<>}^{<>}<>", {i(1), i(2), i(3)}), {condition = in_mathzone}),
+
+s({trig = 'abs', snippetType = 'autosnippet'},
+fmta('|<>|<>',{i(1), i(0)} ),
+{condition = in_mathzone}
+),
+
+s({trig = 'bga', snippetType = 'autosnippet'}, fmta('\\Big|<>\\Big|<>', {i(1), i(2)}), {condition = in_mathzone}  ),
+
+s({trig = 'lm', snippetType = 'autosnippet'}, fmta('\\lim<>', {i(1)})),
+
+s({trig = 'sm', snippetType = 'autosnippet'}, fmta('\\sum<>', {i(1)}), {condition = in_mathzone}),
+
+s({trig = 'sp', snippetType = 'autosnippet'}, fmta('\\sup<>', {i(1)}), {condition = in_mathzone}),
+
+s({ trig = 'dd', snippetType = 'autosnippet'}, fmta("\\frac{d<>}{d<>}<>", {i(1), i(2), i(0)})),
+
+s({trig = 'pp', snippetType = 'autosnippet'}, fmta("\\frac{\\partial<>}{\\partial<>}<>", {i(1), i(2), i(0)})),
+
+s({trig = 'int', snippetType = 'autosnippet'}, fmta("\\int_{<>}^{<>}<> d<>", {i(1), i(2),i(3),i(4)}), {condition = in_mathzone}),
+
+s({trig = 'ify', snippetType = 'autosnippet'}, fmta( "\\infty<>", {i(1)}), {condition = in_mathzone}),
+
+s({trig = 'gt', snippetType = 'autosnippet'}, fmta("\\geq<>", {i(1)}), {condition = in_mathzone}),
+
+s({trig = 'sum', snippetType = 'autosnippet'}, fmta('\\sum_{<>}^{<>}<>', {i(1), i(2), i(3)}), {condition = in_mathzone}),
+
+
+
+
+s({trig = 'lt', snippetType = 'autosnippet'}, fmta("\\leq<>", {i(1)}), {condition = in_mathzone}),
 --environments
 
 s({trig="env", snippetType="autosnippet"},
@@ -61,7 +118,7 @@ s({trig = "prf", snippetType="autosnippet"},
   )
 ),
 
-s("thm",
+s({trig = 'thm', snippetType = 'autosnippet'},
   fmta(
     [[
       \begin{tcolorbox}
@@ -77,7 +134,7 @@ s("thm",
   )
 ),
 
-s("def",
+s({trig = 'df', snippetType = 'autosnippet'},
   fmta(
     [[
       \begin{tcolorbox}
@@ -162,6 +219,50 @@ s("itm",
     ]],
     {
       i(1)
+    }
+  )
+),
+s("alg",
+  fmta(
+    [[
+    \begin{align*}
+        <>&<> \\<>
+    \end{align*}
+    ]],
+    {
+      i(1),
+      i(2),
+      i(0)
+    }
+  )
+),
+s("cs",
+  fmta(
+    [[
+    <>
+    \begin{cases}
+        <>
+    \end{cases}<>
+    ]],
+    {
+      i(1),
+      i(2),
+      i(3)
+    }
+  )
+),
+s("lem",
+  fmta(
+    [[
+      \begin{tcolorbox}
+      \begin{lem}
+      <>
+      \end{lem}<>
+      \end{tcolorbox}
+    ]],
+    {
+      i(1),
+      i(2)
     }
   )
 ),

@@ -3,6 +3,8 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+local km = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
 
 -- empty setup using defaults
 
@@ -24,3 +26,8 @@ require("nvim-tree").setup({
     dotfiles = false,
   },
 })
+
+km('n', '<C-z>', ':NvimTreeToggle<cr>', opts)
+km('n', '<C-x>', ':NvimTreeFocus<cr>', opts)
+km('n', '<leader>x', ':NvimTreeFindFile<cr>', opts)
+km('n', '<leader>z', ':NvimTreeCollapse<cr>', opts)

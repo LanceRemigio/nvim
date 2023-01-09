@@ -38,7 +38,6 @@ req.texlab.setup{
 }
 
 req.tsserver.setup{
-
-
-
 }
+
+

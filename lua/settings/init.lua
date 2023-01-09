@@ -18,3 +18,4 @@ set.termguicolors = true
 set.cursorline = true 
 set.expandtab = true 
 set.modifiable = true 
+set.clipboard = 'unnamedplus'

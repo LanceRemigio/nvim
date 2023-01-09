@@ -1,3 +1,6 @@
+local colors = require('onenord.colors').load()
+
+
 require('onenord').setup({
   theme = 'dark', -- "dark" or "light". Alternatively, remove the option and set vim.o.background instead
   borders = true, -- Split window borders
@@ -12,7 +15,7 @@ require('onenord').setup({
     diagnostics = "underline",
   },
   disable = {
-    background = true, -- Disable setting the background color
+    background = false, -- Disable setting the background color
     cursorline = false, -- Disable the cursorline
     eob_lines = true, -- Hide the end-of-buffer lines
   },
@@ -21,7 +24,9 @@ require('onenord').setup({
     match_paren = false,
   },
   custom_highlights = {}, -- Overwrite default highlight groups
-  custom_colors = {}, -- Overwrite default colors
+  custom_colors = {
+  }, -- Overwrite default colors
 })
 
 vim.cmd('colorscheme onenord')
+

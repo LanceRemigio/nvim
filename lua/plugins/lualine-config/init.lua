@@ -2,8 +2,8 @@ require('lualine').setup {
   options = {
     icons_enabled = true,
     theme = 'auto',
-    component_separators = { left = '', right = '|'},
-    section_separators = { left = '',right = ''},
+  component_separators = { left = '', right = '' },
+    section_separators = { left = '', right = '' },
     disabled_filetypes = {
       statusline = {},
       winbar = {},
@@ -20,29 +20,15 @@ require('lualine').setup {
   sections = {
     lualine_a = {'mode', 
     },
-    lualine_b = {'branch',
+    lualine_b = {'branch', 'diagnostics'
     
-    {
-    'diagnostics',
-    sources = { 'coc', 'nvim_diagnostic'},
-    sections = { 'error', 'warn', 'info', 'hint' },
-    diagnostics_color = {
-        error = 'DiagnosticError', -- Changes diagnostics' error color.
-        warn  = 'DiagnosticWarn',  -- Changes diagnostics' warn color.
-        info  = 'DiagnosticInfo',  -- Changes diagnostics' info color.
-        hint  = 'DiagnosticHint',  -- Changes diagnostics' hint color.
-      },
-      colored = true,           -- Displays diagnostics status in color if set to true.
-      update_in_insert = false, -- Update diagnostics in insert mode.
-      always_visible = true,   -- Show diagnostics even if there are none.
-
-  },
-
-
-
-    'diff', 
+    
   },
     lualine_c = {
+    -- {
+    --     'buffers', 
+    --     mode = 2,
+    -- }
     {
       'filename',
         symbols = {
@@ -53,7 +39,7 @@ require('lualine').setup {
       },
     },
   },
-    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_x = {'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}
   },
@@ -70,3 +56,4 @@ require('lualine').setup {
   inactive_winbar = {},
   extensions = {}
 }
+
