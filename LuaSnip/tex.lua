@@ -42,7 +42,7 @@ fmta("\\sqrt{<>}<>", {i(1), i(2)}),
 {condition = in_mathzone}
 ),
 
-s({trig = 'e', snippetType = 'autosnippet'},
+s({trig = 'eps', snippetType = 'autosnippet'},
 fmta("\\epsilon<>", {i(1)}),
 {condition = in_mathzone}
 ),
