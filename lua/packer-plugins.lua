@@ -31,8 +31,9 @@ return require('packer').startup(function(use)
     use 'romgrk/barbar.nvim'
     use 'nvim-telescope/telescope.nvim'
     -- Themes/UI elements
-    use 'glepnir/dashboard-nvim'
     use 'rmehri01/onenord.nvim'
+    use 'goolord/alpha-nvim'
+    use 'shaunsingh/nord.nvim'
     -- Tools
     use 'tpope/vim-commentary'
     use 'lukas-reineke/indent-blankline.nvim'
@@ -59,6 +60,7 @@ return require('packer').startup(function(use)
     use 'Pocco81/auto-save.nvim'
     use 'frabjous/knap'
     use 'lervag/vimtex'
+    use 'nanotee/sqls.nvim'
  if packer_bootstrap then
     require('packer').sync()
  end

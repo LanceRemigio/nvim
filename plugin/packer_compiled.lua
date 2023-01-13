@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/Luasnip",
     url = "https://github.com/L3MON4D3/Luasnip"
   },
+  ["alpha-nvim"] = {
+    loaded = true,
+    path = "/home/lance/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+    url = "https://github.com/goolord/alpha-nvim"
+  },
   ["auto-save.nvim"] = {
     loaded = true,
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/auto-save.nvim",
@@ -108,11 +113,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
-  },
-  ["dashboard-nvim"] = {
-    loaded = true,
-    path = "/home/lance/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
-    url = "https://github.com/glepnir/dashboard-nvim"
   },
   ["hop.nvim"] = {
     config = { "\27LJ\2\nU\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\tkeys\28etovxqpdygfblzhckisuran\nsetup\bhop\frequire\0" },
@@ -149,6 +149,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
+  },
+  ["nord.nvim"] = {
+    loaded = true,
+    path = "/home/lance/.local/share/nvim/site/pack/packer/start/nord.nvim",
+    url = "https://github.com/shaunsingh/nord.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -204,6 +209,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/presence.nvim",
     url = "https://github.com/andweeb/presence.nvim"
+  },
+  ["sqls.nvim"] = {
+    loaded = true,
+    path = "/home/lance/.local/share/nvim/site/pack/packer/start/sqls.nvim",
+    url = "https://github.com/nanotee/sqls.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,

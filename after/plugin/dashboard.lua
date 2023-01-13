@@ -1,26 +1,29 @@
-local home = os.getenv('HOME')
-local db = require('dashboard')
 
-
-db.default_banner = {                                   
-  ' ███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗',
-  ' ████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║',
-  ' ██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║',
-  ' ██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║',
-  ' ██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║',
-  ' ╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝ ╚═╝',
-}
-
-db.hide_statusline  = false 
-
-db.custom_center = {
-      {icon = '  ',
-      desc = 'Recently opened files   ',
-      action =  'Telescope oldfiles'},
-      {icon = '  ',
-      desc = 'Find File               ',
-      action = 'Telescope find_files' },
-      {icon = '  ',
-      desc = 'Change Colorscheme      ',
-      action = 'Telescope colorscheme'},
+    local alpha = require'alpha'
+    local dashboard = require'alpha.themes.dashboard'
+    dashboard.section.header.val = {
+        [[                               __                ]],
+        [[  ___     ___    ___   __  __ /\_\    ___ ___    ]],
+        [[ / _ `\  / __`\ / __`\/\ \/\ \\/\ \  / __` __`\  ]],
+        [[/\ \/\ \/\  __//\ \_\ \ \ \_/ |\ \ \/\ \/\ \/\ \ ]],
+        [[\ \_\ \_\ \____\ \____/\ \___/  \ \_\ \_\ \_\ \_\]],
+        [[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
     }
+
+
+    dashboard.section.buttons.val = {
+        dashboard.button( "e", "  New file" , ":ene <BAR> startinsert <CR>"),
+        dashboard.button( "r", "  Recently Opened files", ":Telescope oldfiles <CR>"),
+        dashboard.button( "f", "  Find Files", ":Telescope find_files <CR>"),
+        dashboard.button( "c", "  Change Colorscheme", ":Telescope colorscheme <CR>"),
+        dashboard.button("q", "  Quit NVIM" , ":qa<CR>"),
+    }
+
+
+    local handle = io.popen('fortune')
+    local fortune = handle:read("*a")
+    handle:close()
+    dashboard.section.footer.val = fortune
+    dashboard.config.opts.noautocmd = true
+    vim.cmd[[autocmd User AlphaReady echo 'ready']]
+    alpha.setup(dashboard.config)

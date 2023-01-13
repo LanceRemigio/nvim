@@ -6,7 +6,7 @@ local gknapsettings = {
     textopdfviewerlaunch = "mupdf %outputfile%",
     textopdfviewerrefresh = "kill -HUP %pid%",
     textopdfforwardjump = "false",
-    delay = 100
+    delay = 50
 }
 
 -- local gknapsettings = {

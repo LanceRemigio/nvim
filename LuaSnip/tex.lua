@@ -15,79 +15,82 @@ local in_mathzone = function()
 end
 
 return {
-s({trig = 'mm', snippetType = "autosnippet"}, fmta('\\(<>\\)<>', {i(1), i(2)})),
+s({trig = 'mm', snippetType = "autosnippet"}, fmta('\\(<>\\) <>', {i(1), i(2)})),
 
-s({trig = 'md', snippetType = "autosnippet"}, fmta('\\[<>\\]<>', {i(1), i(2)})),
+s({trig = 'md', snippetType = "autosnippet"}, fmta('\\[<>\\] <>', {i(1), i(2)})),
 
-s({trig =  'bpr', snippetType = 'autosnippet'}, fmta('\\Big(<>\\Big)<>', {i(1), i(0)})),
+s({trig =  'bpr', snippetType = 'autosnippet'}, fmta('\\Big(<>\\Big) <>', {i(1), i(2)})),
 
-s('bld', fmta('\\textbf{<>}<>', {i(1), i(0)})),
+s('bld', fmta('\\textbf{ <> } <>', {i(1), i(0)})),
 
-s('it', fmta('\\textit{<>}<>', {i(1), i(0)})),
+s('it', fmta('\\textit{ <> } <>', {i(1), i(0)})),
 
-s({trig = 'sb', snippetType = 'autosnippet'}, fmta('\\subseteq<>', {i(1)}), {condition = in_mathzone}),
+s({trig = "lim", snippetType = "autosnippet"}, fmta("\\lim_{ <> \\to <> } <>", {i(1), i(2), i(3)}), {condition = in_mathzone}),
+
+
+s({trig = 'sb', snippetType = 'autosnippet'}, fmta('\\subseteq <>', {i(1)}), {condition = in_mathzone}),
 
 s({trig = 'mns', snippetType = 'autosnippet'},
-fmta("\\setmminus<>", {i(1)}),
+fmta("\\setmminus <>", {i(1)}),
 {condition = in_mathzone}
 ),
 
 s({trig = 'ff', snippetType = 'autosnippet'},
-fmta("\\frac{<>}{<>}", {i(1), i(2)}),
+fmta("\\frac{ <> }{ <> } <>", {i(1), i(2), i(3)}),
 {condition = in_mathzone}
 ),
 
 s({trig = 'sq', snippetType = 'autosnippet'},
-fmta("\\sqrt{<>}<>", {i(1), i(2)}),
+fmta("\\sqrt{ <> } <>", {i(1), i(2)}),
 {condition = in_mathzone}
 ),
 
 s({trig = 'eps', snippetType = 'autosnippet'},
-fmta("\\epsilon<>", {i(1)}),
+fmta("\\epsilon <>", {i(1)}),
 {condition = in_mathzone}
 ),
 
 s({trig = 'st', snippetType = 'autosnippet'},
-fmta("\\{ <> \\}<>", {i(1), i(2)}),
+fmta("\\{ <> \\} <>", {i(1), i(2)}),
 {condition = in_mathzone}
 ),
 
 s({trig = 'cap', snippetType = 'autosnippet'},
-fmta("\\bigcap_{<>}^{<>}<>",
+fmta("\\bigcap_{ <> }^{ <> } <>",
 {i(1), i(2), i(3)}),
 {condition = in_mathzone}),
 
-s({trig = 'cup', snippetType = 'autosnippet'}, fmta("\\bigcup_{<>}^{<>}<>", {i(1), i(2), i(3)}), {condition = in_mathzone}),
+s({trig = 'cup', snippetType = 'autosnippet'}, fmta("\\bigcup_{ <> }^{ <> } <>", {i(1), i(2), i(3)}), {condition = in_mathzone}),
 
 s({trig = 'abs', snippetType = 'autosnippet'},
-fmta('|<>|<>',{i(1), i(0)} ),
+fmta('| <> | <>',{i(1), i(0)} ),
 {condition = in_mathzone}
 ),
 
-s({trig = 'bga', snippetType = 'autosnippet'}, fmta('\\Big|<>\\Big|<>', {i(1), i(2)}), {condition = in_mathzone}  ),
+s({trig = 'bga', snippetType = 'autosnippet'}, fmta('\\Big| <> \\Big| <>', {i(1), i(2)}), {condition = in_mathzone}  ),
 
-s({trig = 'lm', snippetType = 'autosnippet'}, fmta('\\lim<>', {i(1)})),
+s({trig = 'lm', snippetType = 'autosnippet'}, fmta('\\lim <>', {i(1)})),
 
-s({trig = 'sm', snippetType = 'autosnippet'}, fmta('\\sum<>', {i(1)}), {condition = in_mathzone}),
+s({trig = 'sum', snippetType = 'autosnippet'}, fmta('\\sum <>', {i(1)}), {condition = in_mathzone}),
 
-s({trig = 'sp', snippetType = 'autosnippet'}, fmta('\\sup<>', {i(1)}), {condition = in_mathzone}),
+s({trig = 'sp', snippetType = 'autosnippet'}, fmta('\\sup <>', {i(1)}), {condition = in_mathzone}),
 
-s({ trig = 'dd', snippetType = 'autosnippet'}, fmta("\\frac{d<>}{d<>}<>", {i(1), i(2), i(0)})),
+s({ trig = 'dd', snippetType = 'autosnippet'}, fmta("\\frac{d <> }{d <> } <>", {i(1), i(2), i(3)})),
 
-s({trig = 'pp', snippetType = 'autosnippet'}, fmta("\\frac{\\partial<>}{\\partial<>}<>", {i(1), i(2), i(0)})),
+s({trig = 'pp', snippetType = 'autosnippet'}, fmta("\\frac{\\partial <> }{\\partial <> } <>", {i(1), i(2), i(3)})),
 
-s({trig = 'int', snippetType = 'autosnippet'}, fmta("\\int_{<>}^{<>}<> d<>", {i(1), i(2),i(3),i(4)}), {condition = in_mathzone}),
+s({trig = 'int', snippetType = 'autosnippet'}, fmta("\\int_{ <> }^{ <> } <> d<>", {i(1), i(2),i(3),i(4)}), {condition = in_mathzone}),
 
-s({trig = 'ify', snippetType = 'autosnippet'}, fmta( "\\infty<>", {i(1)}), {condition = in_mathzone}),
+s({trig = 'ify', snippetType = 'autosnippet'}, fmta( "\\infty <>", {i(1)}), {condition = in_mathzone}),
 
-s({trig = 'gt', snippetType = 'autosnippet'}, fmta("\\geq<>", {i(1)}), {condition = in_mathzone}),
+s({trig = 'gt', snippetType = 'autosnippet'}, fmta("\\geq <>", {i(1)}), {condition = in_mathzone}),
 
-s({trig = 'sum', snippetType = 'autosnippet'}, fmta('\\sum_{<>}^{<>}<>', {i(1), i(2), i(3)}), {condition = in_mathzone}),
+s({trig = 'sm', snippetType = 'autosnippet'}, fmta('\\sum_{ <> }^{ <> } <>', {i(1), i(2), i(3)}), {condition = in_mathzone}),
+
+s({trig = 'vc', snippetType = 'autosnippet'}, fmta('\\vec{ <> } <>', {i(1),i(2)}), {condition = in_mathzone}),
 
 
-
-
-s({trig = 'lt', snippetType = 'autosnippet'}, fmta("\\leq<>", {i(1)}), {condition = in_mathzone}),
+s({trig = 'lt', snippetType = 'autosnippet'}, fmta("\\leq <>", {i(1)}), {condition = in_mathzone}),
 --environments
 
 s({trig="env", snippetType="autosnippet"},
@@ -266,4 +269,6 @@ s("lem",
     }
   )
 ),
+
+
 }

@@ -15,12 +15,12 @@ ext_opts = {
     },
 },
 }
-
+    
 vim.keymap.set( 'i', 'kk', function()
-        if ls.expand_or_jumpable() then
+    if ls.expand_or_jumpable() then
             ls.expand_or_jump()
-        end
-    end, { silent = true})
+    end
+            end, { silent = true})
 -- Jumping backwards 
 vim.keymap.set( 'i', 'jj', function()
         if ls.jumpable(-1) then
@@ -34,4 +34,4 @@ vim.keymap.set('i', '<c-l>', function()
         end
     end)
 
-vim.keymap.set('n', '<leader><leader>s', ':source ~/.config/nvim/LuaSnip/*.lua<CR>', {noremap = true })
+vim.keymap.set('n', '<Leader><leader>s', ':lua require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/LuaSnip/"})<CR>')
