@@ -51,6 +51,17 @@ require('telescope').setup {
   }
 }
 
+require("telescope").load_extension "file_browser"
+
+km(
+ "n",
+  "<space>fb",
+  ":Telescope file_browser",
+  { noremap = true }
+)
+
+
+
 km('n', '<leader>ff', ':Telescope find_files<cr>', opts)
 km('n', '<leader>lg', ':Telescope live_grep<cr>', opts)
 km('n', '<leader>bb', ':Telescope buffers<cr>', opts)

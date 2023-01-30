@@ -120,6 +120,11 @@ _G.packer_plugins = {
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/hop.nvim",
     url = "https://github.com/phaazon/hop.nvim"
   },
+  ["iceberg.vim"] = {
+    loaded = true,
+    path = "/home/lance/.local/share/nvim/site/pack/packer/start/iceberg.vim",
+    url = "https://github.com/cocopon/iceberg.vim"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
@@ -150,10 +155,25 @@ _G.packer_plugins = {
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
+  ["material.nvim"] = {
+    loaded = true,
+    path = "/home/lance/.local/share/nvim/site/pack/packer/start/material.nvim",
+    url = "https://github.com/marko-cerovac/material.nvim"
+  },
+  ["nightfox.nvim"] = {
+    loaded = true,
+    path = "/home/lance/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+    url = "https://github.com/EdenEast/nightfox.nvim"
+  },
   ["nord.nvim"] = {
     loaded = true,
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/nord.nvim",
     url = "https://github.com/shaunsingh/nord.nvim"
+  },
+  ["nordic.nvim"] = {
+    loaded = true,
+    path = "/home/lance/.local/share/nvim/site/pack/packer/start/nordic.nvim",
+    url = "https://github.com/AlexvZyl/nordic.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -210,10 +230,20 @@ _G.packer_plugins = {
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/presence.nvim",
     url = "https://github.com/andweeb/presence.nvim"
   },
+  sonokai = {
+    loaded = true,
+    path = "/home/lance/.local/share/nvim/site/pack/packer/start/sonokai",
+    url = "https://github.com/sainnhe/sonokai"
+  },
   ["sqls.nvim"] = {
     loaded = true,
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/sqls.nvim",
     url = "https://github.com/nanotee/sqls.nvim"
+  },
+  ["telescope-file-browser.nvim"] = {
+    loaded = true,
+    path = "/home/lance/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
+    url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,

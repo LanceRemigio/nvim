@@ -28,7 +28,6 @@ km('n', '<leader>pi', ':PackerInstall<cr>', {noremap = true})
 
 km('n', '<leader>ps', ':PackerSync<cr>', {noremap = true})
 
-
 km('n', '<leader>pc', ':PackerClean<cr>', {noremap = true})
 
 
