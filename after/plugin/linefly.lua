@@ -6,7 +6,7 @@ local lualine = require('lualine')
 -- Color table for highlights
 -- stylua: ignore
 local colors = {
-  bg       = '#2e3440',
+  bg       = '#3b4252',
   fg       = '#d8dee9',
   yellow   = '#ebcb8b',
   cyan     = '#88c0d0',
@@ -46,6 +46,7 @@ local config = {
       normal = { c = { fg = colors.fg, bg = colors.bg } },
       inactive = { c = { fg = colors.fg, bg = colors.bg } },
     },
+    globalstatus = true,
   },
   sections = {
     -- these are to remove the defaults
@@ -89,7 +90,7 @@ ins_left {
 ins_left {
   -- mode component
   function()
-    return ''
+    return ''
   end,
   color = function()
     -- auto change color according to neovims mode
@@ -126,11 +127,22 @@ ins_left {
   cond = conditions.buffer_not_empty,
 }
 
+ins_left { 
+'filetype',
+colored = true,
+icon_only = true,
+icon = { align = 'right'}
+}
 ins_left {
   'filename',
   cond = conditions.buffer_not_empty,
   color = { fg = colors.magenta, gui = 'bold' },
+  symbols =  { 
+    modified = '',
+    readonly = '',
+  }
 }
+
 
 ins_left { 'location' }
 
@@ -177,12 +189,12 @@ ins_left {
 }
 
 -- Add components to right sections
-ins_right {
-  'o:encoding', -- option component same as &encoding in viml
-  fmt = string.upper, -- I'm not sure why it's upper case either ;)
-  cond = conditions.hide_in_width,
-  color = { fg = colors.green, gui = 'bold' },
-}
+-- ins_right {
+--   'o:encoding', -- option component same as &encoding in viml
+--   fmt = string.upper, -- I'm not sure why it's upper case either ;)
+--   cond = conditions.hide_in_width,
+--   color = { fg = colors.green, gui = 'bold' },
+-- }
 
 ins_right {
   'fileformat',

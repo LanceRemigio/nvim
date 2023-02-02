@@ -103,7 +103,13 @@ s({trig = 'vc', snippetType = 'autosnippet'}, fmta('\\vec{ <> } ', {i(1)}), {con
 
 
 s({trig = 'lt', snippetType = 'autosnippet'}, fmta("\\leq <>", {i(1)}), {condition = in_mathzone}),
+
+s({trig = 'cl', snippetType = 'autosnippet'}, fmta("\\overline{<>}", {i(1)}), {condition = in_mathzone}),
+
+s({trig = 'epy', snippetType = 'autosnippet'}, fmta("\\emptyset", {}), {condition = in_mathzone}),
+
 --environments
+
 
 s({trig = "lba", snippetType = 'autosnippet'}, fmta("\\lambda",{}), {condition = in_mathzone}),
 

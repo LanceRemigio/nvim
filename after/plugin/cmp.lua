@@ -1,4 +1,5 @@
-local cmp = require'cmp'
+local cmp = require('cmp')
+local luasnip = require('luasnip')
   cmp.setup({
     snippet = {
       -- REQUIRED - you must specify a snippet engine
@@ -72,7 +73,6 @@ cmp.setup({
 end
 },
 })
-
 
 
 
