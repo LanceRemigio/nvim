@@ -33,7 +33,6 @@ return require('packer').startup(function(use)
     use 'nvim-telescope/telescope.nvim'
     use 'nvim-telescope/telescope-file-browser.nvim'
     -- Themes/UI elements
-    use 'rmehri01/onenord.nvim'
     use 'goolord/alpha-nvim'
     use 'shaunsingh/nord.nvim'
     use 'marko-cerovac/material.nvim'
@@ -62,8 +61,10 @@ return require('packer').startup(function(use)
         run = function() vim.fn["mkdp#util#install"]() end,
     })   
     use 'windwp/nvim-autopairs'
-    use 'matze/vim-tex-fold'
+    -- use 'matze/vim-tex-fold'
+    use 'Konfekt/FastFold'
     use 'L3MON4D3/Luasnip'
+    use 'saadparwaiz1/cmp_luasnip' 
     use 'Pocco81/auto-save.nvim'
     use 'frabjous/knap'
     use 'lervag/vimtex'

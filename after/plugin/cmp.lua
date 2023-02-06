@@ -68,12 +68,12 @@ cmp.setup({
             nvim_lsp = "[LSP]",
             look = "[Dict]",
             buffer = "[Buffer]",
+            luasnip = "[SNIP]"
         })[entry.source.name]
     return vim_item
 end
 },
 })
-
 
 
 

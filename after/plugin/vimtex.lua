@@ -3,7 +3,7 @@ local let = vim.g
 let.vimtex_view_method = 'zathura'
 
 let.vimtex_quickfix_mode = 0
--- set.conceallevel = 1
+set.conceallevel = 1
 
 let.vimtex_compiler_latexmk = { 
     ["options"] = { 

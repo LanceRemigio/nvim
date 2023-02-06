@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  FastFold = {
+    loaded = true,
+    path = "/home/lance/.local/share/nvim/site/pack/packer/start/FastFold",
+    url = "https://github.com/Konfekt/FastFold"
+  },
   Luasnip = {
     loaded = true,
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/Luasnip",
@@ -113,6 +118,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/home/lance/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["hop.nvim"] = {
     config = { "\27LJ\2\nU\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\tkeys\28etovxqpdygfblzhckisuran\nsetup\bhop\frequire\0" },
@@ -210,11 +220,6 @@ _G.packer_plugins = {
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
-  ["onenord.nvim"] = {
-    loaded = true,
-    path = "/home/lance/.local/share/nvim/site/pack/packer/start/onenord.nvim",
-    url = "https://github.com/rmehri01/onenord.nvim"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -264,11 +269,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/vim-devicons",
     url = "https://github.com/ryanoasis/vim-devicons"
-  },
-  ["vim-tex-fold"] = {
-    loaded = true,
-    path = "/home/lance/.local/share/nvim/site/pack/packer/start/vim-tex-fold",
-    url = "https://github.com/matze/vim-tex-fold"
   },
   vimtex = {
     loaded = true,
