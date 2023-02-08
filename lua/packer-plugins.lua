@@ -69,6 +69,30 @@ return require('packer').startup(function(use)
     use 'frabjous/knap'
     use 'lervag/vimtex'
     use 'nanotee/sqls.nvim'
+    use { 
+        'nvim-neorg/neorg',
+        config = function()
+            require('neorg').setup { 
+                load = { 
+                    ["core.defaults"] = { }, 
+                    ["core.norg.concealer"] = {},
+                    ["core.norg.dirman"] = { 
+                        config = { 
+                            workspaces = { 
+                                notes = "~/Documents/notes"
+                            },
+                        },
+
+
+                    },
+
+                },
+
+            }
+        end,
+        run = ":Neorg sync-parsers",
+        requires = "nvim-lua/plenary.nvim",
+    }
  if packer_bootstrap then
     require('packer').sync()
  end
