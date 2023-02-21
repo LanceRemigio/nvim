@@ -12,12 +12,9 @@ km('n', '<leader>sf', ':source %<cr>', {noremap = true})
 
 -- navigating through tabs
 
-km('n', '<leader>e',  ':BufferClose<CR>', opts)
+km('n', '<leader>e',  ':bd<cr>', opts)
 
---move to previous/next 
 
-km('n', '<C-l>', ':BufferNext<CR>', opts)
-km('n', '<C-h>', ':BufferPrevious<CR>', opts)
 
 -- autosaving
 km('n', '<leader>n', ':ASToggle<CR>', {})

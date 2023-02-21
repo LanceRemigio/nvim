@@ -70,6 +70,8 @@ fmta("\\bigcap_{ <> }^{ <> } ",
 
 s({trig = 'bup', snippetType = "autosnippet" }, fmta("\\bigcup_{ <> }^{ <> } ", {i(1), i(2)}), {condition = in_mathzone}),
 
+s({trig = 'sn', snippetType = "autosnippet"}, fmta("\\sqrt[<>]{<>}", {i(1), i(2)}), {condition = in_mathzone}),
+
 
 s({trig = 'abs', snippetType = 'autosnippet'},
 fmta('| <> | ',{i(1)}),
@@ -117,7 +119,7 @@ s({trig = "lba", snippetType = 'autosnippet'}, fmta("\\lambda",{}), {condition =
 s({trig = "Lba", snippetType = 'autosnippet'}, fmta("\\Lambda",{}), {condition = in_mathzone}),
 
 
-s({trig="env", snippetType="autosnippet"},
+s("env",
   fmta(
     [[
       \begin{<>}

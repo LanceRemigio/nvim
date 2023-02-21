@@ -5,7 +5,6 @@ localset.relativenumber = false
 localset.cursorline = false
 
 
-vim.g.tex_fold_enabled = true
 
 set('n', '<leader>c', ':VimtexCompile<cr>', {buffer = true })
 
