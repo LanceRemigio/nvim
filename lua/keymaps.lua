@@ -14,7 +14,8 @@ km('n', '<leader>sf', ':source %<cr>', {noremap = true})
 
 km('n', '<leader>e',  ':bd<cr>', opts)
 
-
+km('n', '<c-l>', ':BufferNext<cr>', opts )
+km('n', '<c-h>', ':BufferPrevious<cr>', opts )
 
 -- autosaving
 km('n', '<leader>n', ':ASToggle<CR>', {})

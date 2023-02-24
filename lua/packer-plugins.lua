@@ -29,7 +29,7 @@ return require('packer').startup(function(use)
     use 'andweeb/presence.nvim'
     -- Navigation
     use 'nvim-tree/nvim-tree.lua'
-    -- use 'romgrk/barbar.nvim'
+    use 'romgrk/barbar.nvim'
     use 'nvim-telescope/telescope.nvim'
     -- Themes/UI elements
     use 'goolord/alpha-nvim'
@@ -39,6 +39,8 @@ return require('packer').startup(function(use)
     use 'sainnhe/sonokai'
     use 'cocopon/iceberg.vim'
     use 'AlexvZyl/nordic.nvim'
+    use 'shaunsingh/solarized.nvim'
+    use 'savq/melange-nvim'
     -- Tools
     use 'tpope/vim-commentary'
     use 'lukas-reineke/indent-blankline.nvim'

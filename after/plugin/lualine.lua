@@ -91,7 +91,7 @@ ins_left {
 ins_left {
   -- mode component
   function()
-    return ''
+    return ''
   end,
   color = function()
     -- auto change color according to neovims mode
@@ -161,23 +161,6 @@ ins_left {
   cond = conditions.buffer_not_empty,
 }
 
-ins_left { 
-'filetype',
-colored = true,
-icon_only = true,
-icon = { align = 'right'}
-}
-ins_left {
-  'filename',
-  cond = conditions.buffer_not_empty,
-  color = { fg = colors.magenta, gui = 'bold' },
-  symbols =  { 
-    modified = '',
-    readonly = '',
-  }
-}
-
-
 ins_left { 'location' }
 
 ins_left { 'progress', color = { fg = colors.fg, gui = 'bold' } }
@@ -201,41 +184,24 @@ ins_left {
   end,
 }
 
--- ins_left {
---   -- Lsp server name .
---   function()
---     local msg = ''
---     local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
---     local clients = vim.lsp.get_active_clients()
---     if next(clients) == nil then
---       return msg
---     end
---     for _, client in ipairs(clients) do
---       local filetypes = client.config.filetypes
---       if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
---         return client.name
---       end
---     end
---     return msg
---   end,
---   icon = ' :',
---   color = { fg = '#ffffff', gui = 'bold' },
--- }
+ins_left { 
+'filetype',
+colored = true,
+icon_only = true,
+icon = { align = 'right'}
+}
 
--- Add components to right sections
--- ins_right {
---   'o:encoding', -- option component same as &encoding in viml
---   fmt = string.upper, -- I'm not sure why it's upper case either ;)
---   cond = conditions.hide_in_width,
---   color = { fg = colors.green, gui = 'bold' },
--- }
+ins_left {
+  'filename',
+  cond = conditions.buffer_not_empty,
+  color = { fg = colors.magenta, gui = 'bold' },
+  symbols =  { 
+    modified = '',
+    readonly = '',
+  }
+}
 
--- ins_right {
---   'fileformat',
---   fmt = string.upper,
---   icons_enabled = true, -- I think icons are cool but Eviline doesn't have them. sigh
---   color = { fg = colors.green, gui = 'bold' },
--- }
+
 
 ins_right {
   'branch',
@@ -265,44 +231,4 @@ ins_right {
 
 -- Now don't forget to initialize lualine
 lualine.setup(config)
--- require('lualine').setup {
---   options = {
---     icons_enabled = true,
---     theme = 'auto',
---     component_separators = { left = '', right = ''},
---     section_separators = { left = '', right = ''},
---     disabled_filetypes = {
---       statusline = {},
---       winbar = {},
---     },
---     ignore_focus = {},
---     always_divide_middle = true,
---     globalstatus = true,
---     refresh = {
---       statusline = 1000,
---       tabline = 1000,
---       winbar = 1000,
---     }
---   },
---   sections = {
---     lualine_a = {'mode'},
---     lualine_b = {'branch', 'diff', 'diagnostics'},
---     lualine_c = {'filename'},
---     lualine_x = {'filetype'},
---     lualine_y = {'progress'},
---     lualine_z = {'location'}
---   },
---   inactive_sections = {
---     lualine_a = {},
---     lualine_b = {},
---     lualine_c = {'filename'},
---     lualine_x = {'location'},
---     lualine_y = {},
---     lualine_z = {}
---   },
---   tabline = {},
---   winbar = {},
---   inactive_winbar = {},
---   extensions = {}
--- }
 
