@@ -19,4 +19,3 @@ let.vimtex_compiler_latexmk = {
 }
 
 
-

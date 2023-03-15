@@ -6,17 +6,17 @@ local lualine = require('lualine')
 -- Color table for highlights
 -- stylua: ignore
 local colors = {
-  bg       = '#3b4252',
-  fg       = '#d8dee9',
-  yellow   = '#ebcb8b',
-  cyan     = '#88c0d0',
-  darkblue = '#081633',
-  green    = '#a3be8c',
-  orange   = '#d08770',
+  bg       = '#343F44',
+  fg       = '#D3C6AA',
+  yellow   = '#DBBC7F',
+  cyan     = '#7FBBB3',
+  darkblue = '#3A515D',
+  green    = '#A7C080',
+  orange   = '#E69875',
   violet   = '#5e81ac',
-  magenta  = '#b48ead',
-  blue     = '#81a1c1',
-  red      = '#bf616a',
+  magenta  = '#7fbb3',
+  blue     = '#7FBBB3',
+  red      = '#E67E80',
 }
 
 local conditions = {
@@ -91,7 +91,7 @@ ins_left {
 ins_left {
   -- mode component
   function()
-    return ''
+    return ''
   end,
   color = function()
     -- auto change color according to neovims mode
@@ -121,7 +121,6 @@ ins_left {
   end,
   padding = { right = 1 },
 }
-
 
 
 ins_left { 
@@ -232,3 +231,8 @@ ins_right {
 -- Now don't forget to initialize lualine
 lualine.setup(config)
 
+-- Xft.dpi: 100
+-- Xcursor.size: 10
+-- gnome.wallpaper: "~/Pictures/fog_forest.jpeg"
+-- i3-wm.bar.position: top
+-- i3-wm.client.focused.color.border: "#d8dee9"

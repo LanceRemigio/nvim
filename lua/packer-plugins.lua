@@ -41,6 +41,7 @@ return require('packer').startup(function(use)
     use 'AlexvZyl/nordic.nvim'
     use 'shaunsingh/solarized.nvim'
     use 'savq/melange-nvim'
+    use 'sainnhe/everforest'
     -- Tools
     use 'tpope/vim-commentary'
     use 'lukas-reineke/indent-blankline.nvim'
@@ -92,6 +93,18 @@ return require('packer').startup(function(use)
         run = ":Neorg sync-parsers",
         requires = "nvim-lua/plenary.nvim",
     }
+    use({
+        "utilyre/barbecue.nvim",
+        tag = "*",
+        requires = {
+            "SmiteshP/nvim-navic",
+            "nvim-tree/nvim-web-devicons", -- optional dependency
+        },
+        after = "nvim-web-devicons", -- keep this if you're using NvChad
+        config = function()
+            require("barbecue").setup()
+        end,
+    })
  if packer_bootstrap then
     require('packer').sync()
  end

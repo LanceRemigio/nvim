@@ -110,6 +110,10 @@ s({trig = 'cl', snippetType = 'autosnippet'}, fmta("\\overline{<>}", {i(1)}), {c
 
 s({trig = 'epy', snippetType = 'autosnippet'}, fmta("\\emptyset", {}), {condition = in_mathzone}),
 
+s({trig = 'cp', snippetType = 'autosnippet'}, fmta("(<> \\circ <>)(<>)", {i(1), i(2), i(3)}), {condition  = in_mathzone}),
+
+
+
 --environments
 
 
@@ -300,7 +304,7 @@ s({trig = "h2", snippetType = "autosnippet"}, fmta("\\subsection{<>}", {i(1)})),
 
 s({trig = "h3", snippetType = "autosnippet"}, fmta("\\subsubsection{<>}", {i(1)})),
 
-
+s({trig = "txt", snippetType = "autosnippet"}, fmta("\\text{<>}", {i(1)}), {condition = in_mathzone}),
 
 
 

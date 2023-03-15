@@ -20,4 +20,3 @@ set.expandtab = true
 set.modifiable = true 
 set.clipboard = 'unnamedplus'
 set.showmode = false
-
