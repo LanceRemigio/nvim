@@ -1,22 +1,22 @@
--- -- Eviline config for lualine
--- -- Author: shadmansaleh
--- -- Credit: glepnir
+-- -- -- Eviline config for lualine
+-- -- -- Author: shadmansaleh
+-- -- -- Credit: glepnir
 local lualine = require('lualine')
 
 -- Color table for highlights
 -- stylua: ignore
 local colors = {
-  bg       = '#343F44',
-  fg       = '#D3C6AA',
-  yellow   = '#DBBC7F',
-  cyan     = '#7FBBB3',
-  darkblue = '#3A515D',
-  green    = '#A7C080',
-  orange   = '#E69875',
+  bg       = '#3b4252',
+  fg       = '#d8dee9',
+  yellow   = '#ebcb8b',
+  cyan     = '#88c0d0',
+  darkblue = '#5e81ac',
+  green    = '#8fbcbb',
+  orange   = '#d08770',
   violet   = '#5e81ac',
-  magenta  = '#7fbb3',
-  blue     = '#7FBBB3',
-  red      = '#E67E80',
+  magenta  = '#b48ea',
+  blue     = '#5e81ac',
+  red      = '#bf616a',
 }
 
 local conditions = {
@@ -37,20 +37,23 @@ local conditions = {
 local config = {
   options = {
     -- Disable sections and component separators
-    component_separators = '',
-    section_separators = '',
-    theme = {
-      -- We are going to use lualine_c an lualine_x as left and
-      -- right section. Both are highlighted by c theme .  So we
-      -- are just setting default looks o statusline
-      normal = { c = { fg = colors.fg, bg = colors.bg } },
-      inactive = { c = { fg = colors.fg, bg = colors.bg } },
-    },
+    icons_enabled = true, 
+    always_divide_middle = true,
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
+   -- theme = {
+   --    -- We are going to use lualine_c an lualine_x as left and
+   --    -- right section. Both are highlighted by c theme .  So we
+   --    -- are just setting default looks o statusline
+   --    normal = { c = { fg = colors.fg, bg = colors.bg } },
+   --    inactive = { c = { fg = colors.fg, bg = colors.bg } },
+   --  },
+    theme = 'auto',
     globalstatus = true,
   },
   sections = {
     -- these are to remove the defaults
-    lualine_a = {},
+    lualine_a = {"mode"},
     lualine_b = {},
     lualine_y = {},
     lualine_z = {},
@@ -79,78 +82,78 @@ local function ins_right(component)
   table.insert(config.sections.lualine_x, component)
 end
 
-ins_left {
-  function()
-    return '▊'
-  end,
-  color = { fg = colors.blue }, -- Sets highlighting of component
-  padding = { left = 0, right = 1 }, -- We don't need space before this
-}
+-- ins_left {
+--   function()
+--     return '▊'
+--   end,
+--   color = { fg = colors.blue }, -- Sets highlighting of component
+--   padding = { left = 0, right = 1 }, -- We don't need space before this
+-- }
 
 
-ins_left {
-  -- mode component
-  function()
-    return ''
-  end,
-  color = function()
-    -- auto change color according to neovims mode
-    local mode_color = {
-      n = colors.blue,
-      i = colors.green,
-      v = colors.blue,
-      [''] = colors.blue,
-      V = colors.blue,
-      c = colors.magenta,
-      no = colors.red,
-      s = colors.orange,
-      S = colors.orange,
-      [''] = colors.orange,
-      ic = colors.yellow,
-      R = colors.violet,
-      Rv = colors.violet,
-      cv = colors.red,
-      ce = colors.red,
-      r = colors.cyan,
-      rm = colors.cyan,
-      ['r?'] = colors.cyan,
-      ['!'] = colors.red,
-      t = colors.red,
-    }
-    return { fg = mode_color[vim.fn.mode()] }
-  end,
-  padding = { right = 1 },
-}
+-- ins_left {
+--   -- mode component
+--   function()
+--     return ''
+--   end,
+--   color = function()
+--     -- auto change color according to neovims mode
+--     local mode_color = {
+--       n = colors.blue,
+--       i = colors.green,
+--       v = colors.blue,
+--       [''] = colors.blue,
+--       V = colors.blue,
+--       c = colors.magenta,
+--       no = colors.red,
+--       s = colors.orange,
+--       S = colors.orange,
+--       [''] = colors.orange,
+--       ic = colors.yellow,
+--       R = colors.violet,
+--       Rv = colors.violet,
+--       cv = colors.red,
+--       ce = colors.red,
+--       r = colors.cyan,
+--       rm = colors.cyan,
+--       ['r?'] = colors.cyan,
+--       ['!'] = colors.red,
+--       t = colors.red,
+--     }
+--     return { fg = mode_color[vim.fn.mode()] }
+--   end,
+--   padding = { right = 1 },
+-- }
 
 
-ins_left { 
-    'mode',
-    color = function()
-    local mode_color = {
-      n = colors.blue,
-      i = colors.green,
-      v = colors.cyan,
-      [''] = colors.blue,
-      V = colors.blue,
-      c = colors.red,
-      no = colors.red,
-      s = colors.orange,
-      S = colors.orange,
-      [''] = colors.orange,
-      ic = colors.yellow,
-      R = colors.violet,
-      Rv = colors.violet,
-      cv = colors.red,
-      ce = colors.red,
-      r = colors.cyan,
-      rm = colors.cyan,
-      ['r?'] = colors.cyan,
-      ['!'] = colors.red,
-      t = colors.red,
-    }
-    return { fg = mode_color[vim.fn.mode()] }
-  end,
-}
+-- ins_left { 
+--     'mode',
+--     color = function()
+--     local mode_color = {
+--       n = colors.blue,
+--       i = colors.green,
+--       v = colors.cyan,
+--       [''] = colors.blue,
+--       V = colors.blue,
+--       c = colors.magenta,
+--       no = colors.red,
+--       s = colors.orange,
+--       S = colors.orange,
+--       [''] = colors.orange,
+--       ic = colors.yellow,
+--       R = colors.violet,
+--       Rv = colors.violet,
+--       cv = colors.red,
+--       ce = colors.red,
+--       r = colors.cyan,
+--       rm = colors.cyan,
+--       ['r?'] = colors.cyan,
+--       ['!'] = colors.red,
+--       t = colors.red,
+--     }
+--     return { fg = mode_color[vim.fn.mode()] }
+--   end,
+-- }
 
 
 
@@ -220,19 +223,14 @@ ins_right {
   cond = conditions.hide_in_width,
 }
 
-ins_right {
-  function()
-    return '▊'
-  end,
-  color = { fg = colors.blue },
-  padding = { left = 1 },
-}
+-- ins_right {
+--   function()
+--     return '▊'
+--   end,
+--   color = { fg = colors.blue },
+--   padding = { left = 1 },
+-- }
 
 -- Now don't forget to initialize lualine
 lualine.setup(config)
 
--- Xft.dpi: 100
--- Xcursor.size: 10
--- gnome.wallpaper: "~/Pictures/fog_forest.jpeg"
--- i3-wm.bar.position: top
--- i3-wm.client.focused.color.border: "#d8dee9"

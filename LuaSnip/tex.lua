@@ -306,6 +306,8 @@ s({trig = "h3", snippetType = "autosnippet"}, fmta("\\subsubsection{<>}", {i(1)}
 
 s({trig = "txt", snippetType = "autosnippet"}, fmta("\\text{<>}", {i(1)}), {condition = in_mathzone}),
 
+s({trig = "ss", snippetType = "autosnippet"}, fmta("<>^{<>}", {i(1), i(2)}), {condition = in_mathzone}),
 
 
+s({trig = "ll", snippetType = "autosnippet"}, fmta("<>_{<>}", {i(1), i(2)}), {condition = in_mathzone}),
 }
