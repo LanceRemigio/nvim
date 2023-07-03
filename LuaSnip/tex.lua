@@ -113,6 +113,7 @@ s({trig = 'epy', snippetType = 'autosnippet'}, fmta("\\emptyset", {}), {conditio
 s({trig = 'cp', snippetType = 'autosnippet'}, fmta("(<> \\circ <>)(<>)", {i(1), i(2), i(3)}), {condition  = in_mathzone}),
 
 
+s({trig = 'nn', snippetType = 'autosnippet'}, fmta("\\lVert <> \\rVert", {i(1)}), {condition = in_mathzone}),
 
 --environments
 

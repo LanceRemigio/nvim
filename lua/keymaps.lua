@@ -28,6 +28,6 @@ km('n', '<leader>ps', ':PackerSync<cr>', {noremap = true})
 
 km('n', '<leader>pc', ':PackerClean<cr>', {noremap = true})
 
+km('n', '<leader>ne', ':!node %<cr>', {noremap = true})
 
-
-
+km('n', '<leader>cc', ':Telescope colorscheme<cr>', {noremap = true})

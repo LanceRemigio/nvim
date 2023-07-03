@@ -22,8 +22,6 @@ vim.keymap.set( 'i', 'kk', function()
     end
             end, { silent = true})
 
-
-
 -- Jumping backwards 
 vim.keymap.set( 'i', 'jj', function()
         if ls.jumpable(-1) then
@@ -36,9 +34,6 @@ vim.keymap.set('i', '<c-l>', function()
             ls.change_choice(1)
         end
     end)
-
-
-
 
 vim.keymap.set('n', '<Leader><leader>s', ':lua require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/LuaSnip/"})<CR>')
 

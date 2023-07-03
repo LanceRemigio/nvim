@@ -68,31 +68,6 @@ return require('packer').startup(function(use)
     use 'Pocco81/auto-save.nvim'
     use 'frabjous/knap'
     use 'lervag/vimtex'
-    -- use 'nanotee/sqls.nvim'
-    use { 
-        'nvim-neorg/neorg',
-        config = function()
-            require('neorg').setup { 
-                load = { 
-                    ["core.defaults"] = { }, 
-                    ["core.norg.concealer"] = {},
-                    ["core.norg.dirman"] = { 
-                        config = { 
-                            workspaces = { 
-                                notes = "~/Documents/notes"
-                            },
-                        },
-
-
-                    },
-
-                },
-
-            }
-        end,
-        run = ":Neorg sync-parsers",
-        requires = "nvim-lua/plenary.nvim",
-    }
     use({
         "utilyre/barbecue.nvim",
         tag = "*",

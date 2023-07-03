@@ -62,10 +62,10 @@ cmp.setup({
     format = function(entry, vim_item)
         vim_item.kind = lspkind.presets.default[vim_item.kind]
         vim_item.menu = ({
-            nvim_lsp = "[LSP]",
-            look = "[Dict]",
-            buffer = "[Buffer]",
-            luasnip = "[SNIP]"
+            nvim_lsp = "",
+            look = "",
+            buffer = "",
+            luasnip = ""
         })[entry.source.name]
     return vim_item
 end
@@ -74,6 +74,10 @@ end
 
 
 
+            -- nvim_lsp = "[LSP]",
+            -- look = "[Dict]",
+            -- buffer = "[Buffer]",
+            -- luasnip = "[SNIP]"
 
 
 
