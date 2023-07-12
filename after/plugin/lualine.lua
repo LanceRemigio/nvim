@@ -126,34 +126,6 @@ end
 -- }
 
 
--- ins_left { 
---     'mode',
---     color = function()
---     local mode_color = {
---       n = colors.blue,
---       i = colors.green,
---       v = colors.cyan,
---       [''] = colors.blue,
---       V = colors.blue,
---       c = colors.magenta,
---       no = colors.red,
---       s = colors.orange,
---       S = colors.orange,
---       [''] = colors.orange,
---       ic = colors.yellow,
---       R = colors.violet,
---       Rv = colors.violet,
---       cv = colors.red,
---       ce = colors.red,
---       r = colors.cyan,
---       rm = colors.cyan,
---       ['r?'] = colors.cyan,
---       ['!'] = colors.red,
---       t = colors.red,
---     }
---     return { fg = mode_color[vim.fn.mode()] }
---   end,
--- }
 
 
 
@@ -214,7 +186,7 @@ ins_right {
 ins_right {
   'diff',
   -- Is it me or the symbol for modified us really weird
-  symbols = { added = ' ', modified = '柳 ', removed = ' ' },
+  symbols = { added = ' ', modified = ' ', removed = ' ' },
   diff_color = {
     added = { fg = colors.green },
     modified = { fg = colors.orange },

@@ -1,15 +1,7 @@
 local req = require('lspconfig')
 
-req.pyright.setup{
-  python = {
-    analysis = {
-      autoSearchPaths = true,
-      diagnosticMode = "workspace",
-      useLibraryCodeForTypes = true
-    }
-  }
+req.tsserver.setup{
 }
-
 
 req.texlab.setup{
   texlab = {
@@ -37,7 +29,5 @@ req.texlab.setup{
   }
 }
 
-req.tsserver.setup{
-}
 
 

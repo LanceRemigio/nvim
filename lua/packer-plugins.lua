@@ -42,6 +42,8 @@ return require('packer').startup(function(use)
     use 'shaunsingh/solarized.nvim'
     use 'savq/melange-nvim'
     use 'sainnhe/everforest'
+    use 'ellisonleao/gruvbox.nvim'
+    use 'catppuccin/nvim'
     -- Tools
     use 'tpope/vim-commentary'
     use 'lukas-reineke/indent-blankline.nvim'

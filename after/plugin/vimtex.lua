@@ -1,6 +1,7 @@
 local set = vim.opt
 local let = vim.g
-let.vimtex_view_method = 'zathura'
+let.vimtex_view_general_viewer = 'sumatrapdf.exe'
+let.vimtex_view_general_options = '-reuse-instance @pdf'
 
 let.vimtex_quickfix_mode = 0
 set.conceallevel = 1
