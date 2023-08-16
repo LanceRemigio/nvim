@@ -59,6 +59,6 @@ km('n', '<leader>lg', ':Telescope live_grep<cr>', opts)
 km('n', '<leader>bb', ':Telescope buffers<cr>', opts)
 km('n', '<leader>ht', ':Telescope help_tags<cr>', opts)
 km('n', '<leader>fh', ':Telescope oldfiles<cr>', opts)
-
+km('n', '<leader>cc', ':Telescope colorscheme<cr>', opts)
 
 

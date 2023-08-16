@@ -15,7 +15,18 @@ local in_mathzone = function()
 end
 
 return {
-s({trig = 'mm', snippetType = "autosnippet"}, fmta('\\( <> \\)', {i(1)})),
+s(
+    { 
+    trig = 'mm',
+    snippetType = "autosnippet"
+    },
+    fmta(
+    '\\( <> \\)', 
+    {
+        i(1)
+    }
+    )
+),
 
 s({trig = 'md', snippetType = "autosnippet"}, fmta('\\[ <> \\]', {i(1)})),
 
@@ -28,21 +39,60 @@ s('it', fmta('\\textit{<>} ', {i(1)})),
 s({trig = "lim", snippetType = "autosnippet"}, fmta("\\lim_{ <> \\to <> } ", {i(1), i(2)}), {condition = in_mathzone}),
 
 
-s({trig = 'sb', snippetType = 'autosnippet'}, fmta('\\subseteq <>', {i(1)}), {condition = in_mathzone}),
-
-s({trig = 'mns', snippetType = 'autosnippet'},
-fmta("\\setmminus <>", {i(1)}),
-{condition = in_mathzone}
+s(
+    {
+        trig = 'sb',
+        snippetType = 'autosnippet'
+    },
+    fmta(
+    '\\subseteq <>', 
+    {
+        i(1)}
+    ),
+    {
+        condition = in_mathzone
+    }
 ),
 
-s({trig = 'ff', snippetType = 'autosnippet'},
-fmta("\\frac{ <> }{ <> } ", {i(1), i(2)}),
-{condition = in_mathzone}
+s(
+    {
+        trig = 'mns', 
+        snippetType = 'autosnippet'
+    },
+    fmta(
+    "\\setmminus <>", 
+    {i(1)}
+    ),
+    {
+        condition = in_mathzone
+    }
 ),
 
-s({trig = 'sq', snippetType = 'autosnippet'},
-fmta("\\sqrt{ <> } ", {i(1)}),
-{condition = in_mathzone}
+s
+    (
+    {
+        trig = 'ff',
+        snippetType = 'autosnippet'
+    },
+    fmta(
+        "\\frac{ <> }{ <> } ", 
+        {
+            i(1),
+            i(2)
+        }
+        ),
+    {
+        condition = in_mathzone
+    }
+),
+
+s(
+    {
+    trig = 'sq',
+    snippetType = 'autosnippet'
+    },
+    fmta("\\sqrt{ <> } ", {i(1)}),
+    {condition = in_mathzone}
 ),
 
 s({trig = 'nu', snippetType = 'autosnippet'}, fmta("<>^<>", {i(1), i(2)}), {condition = in_mathzone}),
@@ -115,6 +165,41 @@ s({trig = 'cp', snippetType = 'autosnippet'}, fmta("(<> \\circ <>)(<>)", {i(1), 
 
 s({trig = 'nn', snippetType = 'autosnippet'}, fmta("\\lVert <> \\rVert", {i(1)}), {condition = in_mathzone}),
 
+s(
+    { 
+        trig = "dlt", 
+        snippetType = "autosnippet"
+    }, 
+    fmta( 
+        "\\delta", 
+        {}
+    ), 
+    { 
+        condition = in_mathzone
+    }
+),
+
+s(
+    { 
+        trig = "bra", 
+        snippetType = "autosnippet"
+    },
+    fmta( 
+        "\\Big[<>\\Big]",
+        { 
+            i(1)
+        }
+    ), 
+    { 
+        condition = in_mathzone
+    }
+
+),
+
+
+
+
+
 --environments
 
 
@@ -122,6 +207,69 @@ s({trig = "lba", snippetType = 'autosnippet'}, fmta("\\lambda",{}), {condition =
 
 
 s({trig = "Lba", snippetType = 'autosnippet'}, fmta("\\Lambda",{}), {condition = in_mathzone}),
+
+s(
+    {
+        trig = "defn"
+    },
+    fmta(
+        [[
+            \begin{definition}{<>}{}
+                <>
+            \end{definition}
+        ]], 
+        {
+            i(1),i(2)
+        }
+    ) 
+),
+
+
+
+s(
+    "thm",
+    fmta(
+        [[
+            \begin{theorem}{<>}{}
+                <>
+            \end{theorem}
+        ]], 
+        {
+            i(1),i(2)
+        }
+    ) 
+),
+
+
+s(
+    "lem",
+    fmta(
+        [[
+            \begin{lemma}{<>}{}
+                <>
+            \end{lemma}
+        ]], 
+        {
+            i(1),i(2)
+        }
+    ) 
+),
+
+
+s(
+    "cor",
+    fmta(
+        [[
+            \begin{cor}{<>}{}
+                <>
+            \end{cor}
+        ]], 
+        {
+            i(1),i(2)
+        }
+    ) 
+),
+
 
 
 s("env",
@@ -152,69 +300,6 @@ s({trig = "prf", snippetType="autosnippet"},
   )
 ),
 
-s({trig = 'thm', snippetType = 'autosnippet'},
-  fmta(
-    [[
-      \begin{tcolorbox}
-      \begin{thm}
-      <>
-      \end{thm}<>
-      \end{tcolorbox}
-    ]],
-    {
-      i(1),
-      i(0)
-    }
-  )
-),
-
-s({trig = 'df', snippetType = 'autosnippet'},
-  fmta(
-    [[
-      \begin{tcolorbox}
-      \begin{defn}
-      <>
-      \end{defn}<>
-      \end{tcolorbox}
-    ]],
-    {
-      i(1),
-      i(0)
-    }
-  )
-),
-
-
-s("cor",
-  fmta(
-    [[
-      \begin{tcolorbox}
-      \begin{cor}
-      <>
-      \end{cor}<>
-      \end{tcolorbox}
-    ]],
-    {
-      i(1),
-      i(0)
-    }
-  )
-),
-
-
-s("ex",
-  fmta(
-    [[
-      \begin{ex}
-      <>
-      \end{ex}<>
-    ]],
-    {
-      i(1),
-      i(0)
-    }
-  )
-),
 
 
 s("sol",
@@ -283,21 +368,6 @@ s("cs",
     }
   )
 ),
-s("lem",
-  fmta(
-    [[
-      \begin{tcolorbox}
-      \begin{lem}
-      <>
-      \end{lem}<>
-      \end{tcolorbox}
-    ]],
-    {
-      i(1),
-      i(2)
-    }
-  )
-),
 
 s({trig = "h1", snippetType = "autosnippet"}, fmta("\\section{<>}", {i(1)})),
 
@@ -311,4 +381,86 @@ s({trig = "ss", snippetType = "autosnippet"}, fmta("<>^{<>}", {i(1), i(2)}), {co
 
 
 s({trig = "ll", snippetType = "autosnippet"}, fmta("<>_{<>}", {i(1), i(2)}), {condition = in_mathzone}),
+
+s(
+    {
+        trig = "ve",
+        snippetType = "autosnippet"
+    }, 
+    fmta(
+       "\\varepsilon", 
+       {}
+    ), 
+    { 
+        condition = in_mathzone
+    }
+),
+
+s( 
+    { 
+        trig = "al",
+    },
+    fmta(
+        "\\alpha",
+        {}
+    ),
+    { 
+        condition = in_mathzone
+    }
+),
+
+
+
+s( 
+    { 
+        trig = "lg", 
+        snippetType = "autosnippet"
+    },
+    fmta( 
+        "\\log<>",
+        {
+            i(1)
+        }
+    ),
+    {
+    condition = in_mathzone
+    }
+),
+
+
+s( 
+    { 
+        trig = "gmm", 
+        snippetType = "autosnippet"
+    }, 
+    fmta( 
+        "\\Gamma",
+        { 
+
+        }
+    ), 
+
+    { 
+        condition = in_mathzone
+    }
+)
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+

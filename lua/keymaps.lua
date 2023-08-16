@@ -30,4 +30,13 @@ km('n', '<leader>pc', ':PackerClean<cr>', {noremap = true})
 
 km('n', '<leader>ne', ':!node %<cr>', {noremap = true})
 
-km('n', '<leader>cc', ':Telescope colorscheme<cr>', {noremap = true})
+
+km('n', '<leader>mp', ':MarkdownPreview<cr>', {noremap = true})
+
+km('n', "<c-l>", ':bnext<cr>', {noremap=true}) 
+
+km('n', "<c-h>", ':bprevious<cr>', {noremap=true})
+ 
+km('n', "<c-d>", ":bdelete<cr>", {noremap = true})
+
+

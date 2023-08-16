@@ -1,10 +1,5 @@
--- -- -- Eviline config for lualine
--- -- -- Author: shadmansaleh
--- -- -- Credit: glepnir
 local lualine = require('lualine')
 
--- Color table for highlights
--- stylua: ignore
 local colors = {
   bg       = '#3b4252',
   fg       = '#d8dee9',
@@ -41,13 +36,6 @@ local config = {
     always_divide_middle = true,
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
-   -- theme = {
-   --    -- We are going to use lualine_c an lualine_x as left and
-   --    -- right section. Both are highlighted by c theme .  So we
-   --    -- are just setting default looks o statusline
-   --    normal = { c = { fg = colors.fg, bg = colors.bg } },
-   --    inactive = { c = { fg = colors.fg, bg = colors.bg } },
-   --  },
     theme = 'auto',
     globalstatus = true,
   },
@@ -81,14 +69,6 @@ end
 local function ins_right(component)
   table.insert(config.sections.lualine_x, component)
 end
-
--- ins_left {
---   function()
---     return '▊'
---   end,
---   color = { fg = colors.blue }, -- Sets highlighting of component
---   padding = { left = 0, right = 1 }, -- We don't need space before this
--- }
 
 
 -- ins_left {
@@ -125,10 +105,6 @@ end
 --   padding = { right = 1 },
 -- }
 
-
-
-
-
 ins_left {
   -- filesize component
   'filesize',
@@ -150,8 +126,6 @@ ins_left {
   },
 }
 
--- Insert mid section. You can make any number of sections in neovim :)
--- for lualine it's any number greater then 2
 ins_left {
   function()
     return '%='
@@ -175,8 +149,6 @@ ins_left {
   }
 }
 
-
-
 ins_right {
   'branch',
   icon = '',
@@ -195,14 +167,5 @@ ins_right {
   cond = conditions.hide_in_width,
 }
 
--- ins_right {
---   function()
---     return '▊'
---   end,
---   color = { fg = colors.blue },
---   padding = { left = 1 },
--- }
-
--- Now don't forget to initialize lualine
 lualine.setup(config)
 
