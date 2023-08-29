@@ -2,7 +2,6 @@ local ls = require('luasnip')
 local s = ls.snippet
 local sn = ls.snippet_node
 -- local t = ls.text_node
--- local i = ls.insert_node
 local f = ls.function_node
 local d = ls.dynamic_node
 -- local fmt = require('luasnip.extras.fmt').fmt
@@ -141,9 +140,23 @@ s({trig = 'sp', snippetType = 'autosnippet'}, fmta('\\sup <>', {i(1)}), {conditi
 
 s({ trig = 'dd', snippetType = 'autosnippet'}, fmta("\\frac{d <> }{d <> } ", {i(1), i(2)})),
 
-s({trig = 'pp', snippetType = 'autosnippet'}, fmta("\\frac{\\partial <> }{\\partial <> } ", {i(1), i(2)})),
+s(
+    {
+    trig = 'pp', snippetType = 'autosnippet'
+    }, 
+    fmta(
+    "\\frac{\\partial <> }{\\partial <> } ",
+    {
+        i(1), 
+        i(2)
+    }
+    ),
+    { 
+        condition = in_mathzone
+    }
+),
 
-s({trig = 'int', snippetType = 'autosnippet'}, fmta("\\int_{ <> }^{ <> } <> d<>", {i(1), i(2),i(3),i(4)}), {condition = in_mathzone}),
+s({trig = 'int', snippetType = 'autosnippet'}, fmta("\\int_{ <> }^{ <> } <> \\ d<>", {i(1), i(2),i(3),i(4)}), {condition = in_mathzone}),
 
 s({trig = 'ify', snippetType = 'autosnippet'}, fmta( "\\infty <>", {i(1)}), {condition = in_mathzone}),
 
@@ -443,9 +456,66 @@ s(
     { 
         condition = in_mathzone
     }
+),
+
+
+s( 
+    { 
+        trig = "pd",
+        snippetType = "autosnippet"
+    },
+    fmta( 
+        "\\prod_{<>}^{<>}",
+        { 
+            i(1),
+            i(2)
+        }
+    ),
+    { 
+        condition = in_mathzone
+    }
+
+),
+
+s(
+    { 
+        trig = "ex"
+    }, 
+    fmta(
+        [[
+        \begin{example}{<>}{}
+        <>
+        \end{example}
+        ]],
+        { 
+            i(1),
+            i(2)
+        }
+    ),
+    { 
+        condition = in_mathzone
+    }
+
+
+),
+
+s( 
+    { 
+        trig = "ho",
+        description = "half open interval"
+    }, 
+    fmta( 
+        "(<>,<>]",
+        { 
+            i(1), 
+            i(2)
+        }
+    ), 
+    { 
+        condition = in_mathzone
+    }
+
 )
-
-
 
 
 
