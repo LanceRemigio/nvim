@@ -1,7 +1,9 @@
 require('onedark').setup { 
-    style = 'warm',
-    transparent = true
+    style = 'warmer',
+    transparent = true,
+    lualine = { 
+        transparent = true,
+    },
 }
-
 
 require('onedark').load()

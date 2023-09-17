@@ -16,18 +16,18 @@ ext_opts = {
 },
 }
     
-vim.keymap.set( 'i', 'kk', function()
+vim.keymap.set( 'i', "kk", function()
     if ls.expand_or_jumpable() then
             ls.expand_or_jump()
     end
-            end, { silent = true})
+            end, {noremap = true, silent = true})
 
 -- Jumping backwards 
 vim.keymap.set( 'i', 'jj', function()
         if ls.jumpable(-1) then
             ls.jump(-1)
         end
-    end, { silent = true})
+    end, {noremap = true, silent = true})
 -- listing choice of snippets to choose from
 vim.keymap.set('i', '<c-l>', function()
         if ls.choice_active() then

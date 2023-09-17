@@ -1,6 +1,6 @@
 
 require('nvim-treesitter.configs').setup {
-    ensure_installed = {'latex', 'python', 'javascript', 'lua'},
+    ensure_installed = {'latex', 'python', 'javascript', 'lua', 'sql'},
     highlight = { 
         enable = true,
         disable = {"latex"},

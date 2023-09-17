@@ -17,6 +17,11 @@ km('n', '<leader>e',  ':bd<cr>', opts)
 km('n', '<c-l>', ':BufferNext<cr>', opts )
 km('n', '<c-h>', ':BufferPrevious<cr>', opts )
 
+
+km("v", "J", ":m '>+1<cr>gv=gv", {})
+km("v", "K", ":m '<-2<cr>gv=gv", {})
+
+
 -- autosaving
 km('n', '<leader>n', ':ASToggle<CR>', {})
 

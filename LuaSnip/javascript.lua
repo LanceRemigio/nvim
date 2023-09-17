@@ -25,7 +25,9 @@ s(
 ),
 
 s(
-    {trig = "for"},
+    {
+        trig = "for" 
+    },
     fmta( 
         [[ 
             for (<> ; <> ; <>) { 

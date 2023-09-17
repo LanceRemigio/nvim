@@ -38,6 +38,10 @@ s('it', fmta('\\textit{<>} ', {i(1)})),
 s({trig = "lim", snippetType = "autosnippet"}, fmta("\\lim_{ <> \\to <> } ", {i(1), i(2)}), {condition = in_mathzone}),
 
 
+
+
+
+
 s(
     {
         trig = 'sb',
@@ -515,8 +519,7 @@ s(
         condition = in_mathzone
     }
 
-)
-
+),
 
 
 

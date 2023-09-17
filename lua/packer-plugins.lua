@@ -1,4 +1,3 @@
-
 local ensure_packer = function()
   local fn = vim.fn
   local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -21,28 +20,30 @@ return require('packer').startup(function(use)
     use 'ryanoasis/vim-devicons'
     use 'kyazdani42/nvim-web-devicons'
     use 'nvim-lualine/lualine.nvim'
-    -- use 'bluz71/nvim-linefly'
     use 'nvim-treesitter/nvim-treesitter'
     use 'akinsho/toggleterm.nvim'
     use 'glepnir/lspsaga.nvim'
     use 'onsails/lspkind.nvim'
-    use 'andweeb/presence.nvim'
     -- Navigation
-    use 'nvim-tree/nvim-tree.lua'
-    -- use 'romgrk/barbar.nvim'
+   -- use 'nvim-tree/nvim-tree.lua'
     use 'nvim-telescope/telescope.nvim'
     use 'ThePrimeagen/harpoon'
+    use {
+        "nvim-telescope/telescope-file-browser.nvim",
+        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+    }
     -- Themes/UI elements
     use 'goolord/alpha-nvim'
     -- use 'shaunsingh/nord.nvim'
     use 'EdenEast/nightfox.nvim'
-    use 'AlexvZyl/nordic.nvim'
-    use 'sainnhe/everforest'
-    use 'ellisonleao/gruvbox.nvim'
-    use 'catppuccin/nvim'
-    use 'navarasu/onedark.nvim'
-    use 'gbprod/nord.nvim'
-    use 'rmehri01/onenord.nvim'
+    -- use 'projekt0n/github-nvim-theme'
+    -- use 'savq/melange-nvim'
+    -- use 'catppuccin/nvim'
+    -- use 'marko-cerovac/material.nvim'
+    -- use 'Mofiqul/vscode.nvim'
+    -- use 'mhartington/oceanic-next'
+    -- use 'dasupradyumna/midnight.nvim'
+    -- use 'xiyaowong/transparent.nvim'
     -- Tools
     use 'tpope/vim-commentary'
     use 'lukas-reineke/indent-blankline.nvim'
@@ -67,8 +68,9 @@ return require('packer').startup(function(use)
     use 'L3MON4D3/Luasnip'
     use 'saadparwaiz1/cmp_luasnip' 
     use 'Pocco81/auto-save.nvim'
-    use 'frabjous/knap'
     use 'lervag/vimtex'
+    use 'tpope/vim-dadbod'
+    use 'kristijanhusak/vim-dadbod-ui'
     use({
         "utilyre/barbecue.nvim",
         tag = "*",

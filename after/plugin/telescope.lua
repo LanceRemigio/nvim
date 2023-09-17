@@ -1,57 +1,50 @@
 local actions = require('telescope.actions')
+local builtin = require('telescope.builtin')
 local km = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
-require('telescope').setup {
-  defaults = {
-    layout_config = {
-      width = 0.75,
-      prompt_position = "top",
-      preview_cutoff = 120,
-      horizontal = {mirror = false},
-      vertical = {mirror = false}
-    },
-    find_command = {
-      'rg', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'
-    },
-    prompt_prefix = "󰍉 ",
-    selection_caret = " ",
-    entry_prefix = "  ",
-    initial_mode = "insert",
-    selection_strategy = "reset",
-    sorting_strategy = "descending",
-    layout_strategy = "horizontal",
-    file_sorter = require'telescope.sorters'.get_fuzzy_file,
-    file_ignore_patterns = {},
-    generic_sorter = require'telescope.sorters'.get_generic_fuzzy_sorter,
-    path_display = {},
-    winblend = 0,
-    border = {},
-    borderchars = {'─', '│', '─', '│', '╭', '╮', '╯', '╰'},
-    color_devicons = true,
-    use_less = true,
-    set_env = {['COLORTERM'] = 'truecolor'}, -- default = nil,
-    file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
-    grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
-    qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
-    buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker,
-    mappings = {
-      i = {
-        ["<C-j>"] = actions.move_selection_next,
-        ["<C-k>"] = actions.move_selection_previous,
-        ["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist,
-        ["<esc>"] = actions.close,
-        ["<CR>"] = actions.select_default + actions.center,
+
+require('telescope').setup{
+    extensions = { 
+        file_browser = {
+                  mappings = {
+        ["i"] = {
+            -- ["<A-c>"] = fb_actions.create,
+            -- ["<S-CR>"] = fb_actions.create_from_prompt,
+            -- ["<A-r>"] = fb_actions.rename,
+            -- ["<A-m>"] = fb_actions.move,
+            -- ["<A-y>"] = fb_actions.copy,
+            -- ["<A-d>"] = fb_actions.remove,
+            -- ["<C-o>"] = fb_actions.open,
+            -- ["<C-g>"] = fb_actions.goto_parent_dir,
+            -- ["<C-e>"] = fb_actions.goto_home_dir,
+            -- ["<C-w>"] = fb_actions.goto_cwd,
+            -- ["<C-t>"] = fb_actions.change_cwd,
+            -- ["<C-f>"] = fb_actions.toggle_browser,
+            -- ["<C-h>"] = fb_actions.toggle_hidden,
+            -- ["<C-s>"] = fb_actions.toggle_all,
+            -- ["<bs>"] = fb_actions.backspace,
+        },
+        ["n"] = {
+           -- ["c"] = fb_actions.create,
+          -- ["r"] = fb_actions.rename,
+          -- ["m"] = fb_actions.move,
+          -- ["y"] = fb_actions.copy,
+          -- ["d"] = fb_actions.remove,
+          -- ["o"] = fb_actions.open,
+          -- ["g"] = fb_actions.goto_parent_dir,
+          -- ["e"] = fb_actions.goto_home_dir,
+          -- ["w"] = fb_actions.goto_cwd,
+          -- ["t"] = fb_actions.change_cwd,
+          -- ["f"] = fb_actions.toggle_browser,
+          -- ["h"] = fb_actions.toggle_hidden,
+          -- ["s"] = fb_actions.toggle_all,        
+        },
       },
-      n = {
-        ["<C-j>"] = actions.move_selection_next,
-        ["<C-k>"] = actions.move_selection_previous,
-        ["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist
-      }
+        }
     }
-  }
 }
 
-
+require("telescope").load_extension "file_browser"
 
 
 km('n', '<leader>ff', ':Telescope find_files<cr>', opts)
@@ -60,5 +53,7 @@ km('n', '<leader>bb', ':Telescope buffers<cr>', opts)
 km('n', '<leader>ht', ':Telescope help_tags<cr>', opts)
 km('n', '<leader>fh', ':Telescope oldfiles<cr>', opts)
 km('n', '<leader>cc', ':Telescope colorscheme<cr>', opts)
+km('n', '<leader>gf', ':Telescope git_files<cr>', opts )
+km('n', '<leader>fb', ':Telescope file_browser<cr>', opts)
 
 

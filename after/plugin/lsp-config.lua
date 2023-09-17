@@ -29,5 +29,7 @@ req.texlab.setup{
   }
 }
 
-
+req.pyright.setup{
+    
+}
 
