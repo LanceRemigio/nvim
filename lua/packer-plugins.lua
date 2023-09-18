@@ -38,7 +38,7 @@ return require('packer').startup(function(use)
     use 'EdenEast/nightfox.nvim'
     -- use 'projekt0n/github-nvim-theme'
     -- use 'savq/melange-nvim'
-    -- use 'catppuccin/nvim'
+    use 'catppuccin/nvim'
     -- use 'marko-cerovac/material.nvim'
     -- use 'Mofiqul/vscode.nvim'
     -- use 'mhartington/oceanic-next'

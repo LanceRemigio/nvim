@@ -1,4 +1,4 @@
 require('packer-plugins') 
 require('settings')
 require('keymaps')
-require('colors/nightfox')
+require('colors/catpuccin')
