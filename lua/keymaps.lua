@@ -44,4 +44,7 @@ km('n', "<c-h>", ':bprevious<cr>', {noremap=true})
  
 km('n', "<c-d>", ":bdelete<cr>", {noremap = true})
 
+km('n', '<leader>db', ':DBUIToggle<cr>', {noremap =true})
+
+km('n', '<leader>dba', ':DBUIAddConnection<cr>', {noremap = true})
 

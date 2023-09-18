@@ -25,13 +25,13 @@ return require('packer').startup(function(use)
     use 'glepnir/lspsaga.nvim'
     use 'onsails/lspkind.nvim'
     -- Navigation
-   -- use 'nvim-tree/nvim-tree.lua'
+   use 'nvim-tree/nvim-tree.lua'
     use 'nvim-telescope/telescope.nvim'
     use 'ThePrimeagen/harpoon'
-    use {
-        "nvim-telescope/telescope-file-browser.nvim",
-        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
-    }
+    -- use {
+    --     "nvim-telescope/telescope-file-browser.nvim",
+    --     requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+    -- }
     -- Themes/UI elements
     use 'goolord/alpha-nvim'
     -- use 'shaunsingh/nord.nvim'
