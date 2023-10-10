@@ -48,7 +48,7 @@ s(
 
 
 s(
-    "pyenv",
+    "py",
     fmta(
     [[
         ````python
@@ -59,6 +59,84 @@ s(
         i(1)
     }
     )
+),
+
+
+s(
+    "sql",
+    fmta(
+        [[
+            ```sql
+            <>
+            ```
+        ]],
+        {
+            i(1)
+        }
+    )
+),
+
+
+s(
+    "exp",
+    fmta(
+        [[
+            `<>`
+        ]],
+        {
+            i(1)
+        }
+    )
+),
+
+
+s(
+    {
+        trig = "h1",
+        snippetType = 'autosnippet'
+},
+    fmta(
+        "#",
+        {}
+    )
+),
+
+s(
+    {
+        trig = 'h2',
+        snippetType = 'autosnippet'
+    },
+    fmta(
+        "##",
+        {}
+    )
+
+),
+
+
+s(
+    {
+        trig = 'h3',
+        snippetType = 'autosnippet'
+    },
+    fmta(
+        "###",
+        {}
+    )
+
+),
+
+
+s(
+    {
+        trig = 'bld',
+        snippetType = 'autosnippet'
+    },
+    fmta(
+        "**<>**",
+        {i(1)}
+    )
+
 ),
 
 

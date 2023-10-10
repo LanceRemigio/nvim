@@ -24,37 +24,34 @@ return require('packer').startup(function(use)
     use 'akinsho/toggleterm.nvim'
     use 'glepnir/lspsaga.nvim'
     use 'onsails/lspkind.nvim'
+    use 'andweeb/presence.nvim'
     -- Navigation
-   use 'nvim-tree/nvim-tree.lua'
+    -- use 'nvim-tree/nvim-tree.lua'
     use 'nvim-telescope/telescope.nvim'
     use 'ThePrimeagen/harpoon'
-    -- use {
-    --     "nvim-telescope/telescope-file-browser.nvim",
-    --     requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
-    -- }
+    -- use 'stevearc/oil.nvim'
+    use {
+        "nvim-telescope/telescope-file-browser.nvim",
+        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+    }
     -- Themes/UI elements
-    use 'goolord/alpha-nvim'
-    -- use 'shaunsingh/nord.nvim'
+    -- use 'goolord/alpha-nvim'
+    use 'shaunsingh/nord.nvim'
     use 'EdenEast/nightfox.nvim'
+    use 'AlexvZyl/nordic.nvim'
+    -- use 'kaicataldo/material.vim'
     -- use 'projekt0n/github-nvim-theme'
     -- use 'savq/melange-nvim'
     use 'catppuccin/nvim'
     -- use 'marko-cerovac/material.nvim'
-    -- use 'Mofiqul/vscode.nvim'
+    use 'Mofiqul/vscode.nvim'
+    use'rmehri01/onenord.nvim'
     -- use 'mhartington/oceanic-next'
-    -- use 'dasupradyumna/midnight.nvim'
+    use 'dasupradyumna/midnight.nvim'
     -- use 'xiyaowong/transparent.nvim'
     -- Tools
     use 'tpope/vim-commentary'
     use 'lukas-reineke/indent-blankline.nvim'
-    use {'phaazon/hop.nvim',
-        branch = 'v2',
-        config = function()
-            require('hop').setup { 
-                keys = 'etovxqpdygfblzhckisuran',
-            }
-        end,
-    }
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
@@ -62,7 +59,7 @@ return require('packer').startup(function(use)
     use 'hrsh7th/nvim-cmp'
     use({
         "iamcco/markdown-preview.nvim",
-        run = function() vim.fn["mkdp#util#install"]() end,
+        run = function() vim.fn() end,
     })   
     use 'windwp/nvim-autopairs'
     use 'L3MON4D3/Luasnip'

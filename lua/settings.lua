@@ -5,7 +5,7 @@ local let = vim.g
 
 let.cmd = [['filetype plugin indent on']]
 let.cmd = [['syntax enable']]
-
+set.guicursor = ""
 let.mapleader = ' '
 set.number = true 
 set.relativenumber = true 
