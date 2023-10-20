@@ -12,7 +12,7 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
-    -- Functionality
+    -- Functionality -- 
     use 'wbthomason/packer.nvim'
     use 'williamboman/nvim-lsp-installer'
     use 'neovim/nvim-lspconfig'
@@ -25,11 +25,9 @@ return require('packer').startup(function(use)
     use 'glepnir/lspsaga.nvim'
     use 'onsails/lspkind.nvim'
     use 'andweeb/presence.nvim'
-    -- Navigation
-    -- use 'nvim-tree/nvim-tree.lua'
+    -- Navigation -- 
     use 'nvim-telescope/telescope.nvim'
     use 'ThePrimeagen/harpoon'
-    -- use 'stevearc/oil.nvim'
     use {
         "nvim-telescope/telescope-file-browser.nvim",
         requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
@@ -38,19 +36,26 @@ return require('packer').startup(function(use)
     -- use 'goolord/alpha-nvim'
     use 'shaunsingh/nord.nvim'
     use 'EdenEast/nightfox.nvim'
+    use 'sainnhe/edge'
+    use 'lewpoly/sherbet.nvim'
+    -- use 'RRethy/nvim-base16'
+    -- use 'cocopon/iceberg.vim'
     use 'AlexvZyl/nordic.nvim'
-    -- use 'kaicataldo/material.vim'
     -- use 'projekt0n/github-nvim-theme'
-    -- use 'savq/melange-nvim'
+    use 'savq/melange-nvim'
     use 'catppuccin/nvim'
     -- use 'marko-cerovac/material.nvim'
-    use 'Mofiqul/vscode.nvim'
+    -- use 'Mofiqul/vscode.nvim'
     use'rmehri01/onenord.nvim'
+    -- use 'bluz71/vim-moonfly-colors'
+    use 'navarasu/onedark.nvim'
     -- use 'mhartington/oceanic-next'
-    use 'dasupradyumna/midnight.nvim'
+    -- use 'mhartington/oceanic-next'
+    -- use 'dasupradyumna/midnight.nvim'
     -- use 'xiyaowong/transparent.nvim'
-    -- Tools
+    -- Tools --
     use 'tpope/vim-commentary'
+    -- use 'vimwiki/vimwiki'
     use 'lukas-reineke/indent-blankline.nvim'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'

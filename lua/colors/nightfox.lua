@@ -17,16 +17,16 @@ require('nightfox').setup({
       },
     },
     styles = {               -- Style to be applied to different syntax groups
-      comments = "NONE",     -- Value is any valid attr-list value `:help attr-list`
+      comments = "italic",     -- Value is any valid attr-list value `:help attr-list`
       conditionals = "NONE",
       constants = "NONE",
-      functions = "NONE",
-      keywords = "NONE",
+      functions = "bold",
+      keywords = "bold",
       numbers = "NONE",
       operators = "NONE",
-      strings = "NONE",
+      strings = "italic",
       types = "NONE",
-      variables = "NONE",
+      variables = "bold",
     },
     inverse = {             -- Inverse highlight for different types
       match_paren = false,

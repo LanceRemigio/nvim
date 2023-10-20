@@ -6,11 +6,11 @@ require 'nordic' .setup {
     -- Enable italic comments.
     italic_comments = true,
     -- Enable general editor background transparency.
-    transparent_bg = false,
+    transparent_bg = true,
     -- Enable brighter float border.
     bright_border = false,
     -- Reduce the overall amount of blue in the theme (diverges from base Nord).
-    reduced_blue = true,
+    reduced_blue = false,
     -- Swap the dark background with the normal one.
     swap_backgrounds = false,
     -- Override the styling of any highlight group.
@@ -34,13 +34,5 @@ require 'nordic' .setup {
         -- Available styles: `classic`, `flat`.
         style = 'flat',
     },
-    leap = {
-        -- Dims the backdrop when using leap.
-        dim_backdrop = false,
-    },
-    ts_context = {
-        -- Enables dark background for treesitter-context window
-        dark_background = true,
-    }
 }
 vim.cmd.colorscheme("nordic")

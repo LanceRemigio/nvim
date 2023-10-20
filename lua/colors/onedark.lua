@@ -1,6 +1,13 @@
 require('onedark').setup { 
-    style = 'warmer',
+    style = 'darker',
     transparent = true,
+    codestyle = {
+        comments = 'italic',
+        keywords = 'none',
+        functions = 'bold',
+        strings = 'italic',
+        variables = 'bold'
+    },
     lualine = { 
         transparent = true,
     },
