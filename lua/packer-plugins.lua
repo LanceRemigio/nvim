@@ -8,7 +8,6 @@ local ensure_packer = function()
   end
   return false
 end
-
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
@@ -28,6 +27,7 @@ return require('packer').startup(function(use)
     -- Navigation -- 
     use 'nvim-telescope/telescope.nvim'
     use 'ThePrimeagen/harpoon'
+    -- use 'junegunn/fzf.vim'
     use {
         "nvim-telescope/telescope-file-browser.nvim",
         requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
@@ -36,22 +36,11 @@ return require('packer').startup(function(use)
     -- use 'goolord/alpha-nvim'
     use 'shaunsingh/nord.nvim'
     use 'EdenEast/nightfox.nvim'
-    use 'sainnhe/edge'
     use 'lewpoly/sherbet.nvim'
-    -- use 'RRethy/nvim-base16'
-    -- use 'cocopon/iceberg.vim'
-    use 'AlexvZyl/nordic.nvim'
-    -- use 'projekt0n/github-nvim-theme'
-    use 'savq/melange-nvim'
+    use 'RRethy/nvim-base16'
+    use 'projekt0n/github-nvim-theme'
     use 'catppuccin/nvim'
-    -- use 'marko-cerovac/material.nvim'
-    -- use 'Mofiqul/vscode.nvim'
-    use'rmehri01/onenord.nvim'
-    -- use 'bluz71/vim-moonfly-colors'
-    use 'navarasu/onedark.nvim'
-    -- use 'mhartington/oceanic-next'
-    -- use 'mhartington/oceanic-next'
-    -- use 'dasupradyumna/midnight.nvim'
+    use 'rmehri01/onenord.nvim'
     -- use 'xiyaowong/transparent.nvim'
     -- Tools --
     use 'tpope/vim-commentary'
@@ -60,8 +49,8 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
-    use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-cmdline'
     use({
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn() end,

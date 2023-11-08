@@ -521,9 +521,30 @@ s(
 
 ),
 
+s(
+    "exer",
+    fmta(
+        "\\subsubsection{Exercise <>.<>.<>}",
+        {
+            i(1), i(2), i(3)
+        }
+    )
+),
 
 
-
+s(
+    {
+        trig = "tup",
+        snippetType = "autosnippet"
+    },
+    fmta(
+        [[(<>_{<>}, <>_{<>}, \dots, <>_{<>}) ]],
+        { i(1), i(2), i(3), i(4) , i(5), i(6)}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
 
 
 

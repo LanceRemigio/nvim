@@ -6,6 +6,6 @@ localset.cursorline = false
 
 
 
-set('n', '<leader>c', ':VimtexCompile<cr>', {buffer = true })
+set('n', '<leader>r', ':VimtexCompile<cr>', {buffer = true })
 
 

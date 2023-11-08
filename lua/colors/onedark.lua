@@ -1,9 +1,9 @@
 require('onedark').setup { 
-    style = 'darker',
-    transparent = true,
+    style = 'dark',
+    transparent = false,
     codestyle = {
         comments = 'italic',
-        keywords = 'none',
+        keywords = 'bold',
         functions = 'bold',
         strings = 'italic',
         variables = 'bold'

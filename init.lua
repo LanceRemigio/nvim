@@ -1,5 +1,5 @@
 require('packer-plugins') 
 require('settings')
 require('keymaps')
-require('colors/onenord')
+require('colors/base16-colors')
 

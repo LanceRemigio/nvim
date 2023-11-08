@@ -1,7 +1,7 @@
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'nordfox',
+    theme = 'auto',
     component_separators = { left = '', right = ''},
     section_separators = { left = '' , right = ''},
     disabled_filetypes = {
@@ -18,7 +18,7 @@ require('lualine').setup {
     }
   },
   sections = {
-    lualine_a = {'mode', },
+    lualine_a = {'mode' },
     lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_c = {'filename'},
     lualine_x = {'filetype',"progress"},
@@ -26,7 +26,7 @@ require('lualine').setup {
     lualine_z = {'location'}
   },
   inactive_sections = {
-    lualine_a = {},
+    lualine_a = {'mode'},
     lualine_b = {},
     lualine_c = {'filename'},
     lualine_x = {'location'},

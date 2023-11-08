@@ -2,14 +2,13 @@ local cmp = require('cmp')
 local luasnip = require('luasnip')
   cmp.setup({
     snippet = {
-      -- REQUIRED - you must specify a snippet engine
       expand = function(args)
          require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
       end,
     },
-    window = {
-      completion = cmp.config.window.bordered(),
-      documentation = cmp.config.window.bordered(),
+    view = { 
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
     },
     mapping = cmp.mapping.preset.insert({
       ['<C-j>'] = cmp.mapping.select_next_item(),  
@@ -20,12 +19,14 @@ local luasnip = require('luasnip')
       ['<C-e>'] = cmp.mapping.abort(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
-    sources = cmp.config.sources({
-      { name = 'nvim_lsp' },
-      { name = 'luasnip'},
-    }, {
-      { name = 'buffer' },
-    })
+    sources = { 
+        {name = 'nvim_lsp'},
+        {name = 'look' },
+        {name = 'buffer'},
+    },
+    experimental = { 
+        ghost_text = true
+    }
   })
 
   -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
@@ -35,6 +36,7 @@ local luasnip = require('luasnip')
       { name = 'buffer' }
     }
   })
+
 
   -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
   cmp.setup.cmdline(':', {
@@ -64,22 +66,15 @@ cmp.setup({
     format = function(entry, vim_item)
         vim_item.kind = lspkind.presets.default[vim_item.kind]
         vim_item.menu = ({
-            nvim_lsp = "",
-            look = "",
-            buffer = "",
-            luasnip = ""
+            nvim_lsp = "[LSP]",
+            look = "[Dict]",
+            buffer = "[Buffer]",
+            luasnip = "[SNIP]"
         })[entry.source.name]
     return vim_item
 end
 },
 })
-
-
-
-            -- nvim_lsp = "[LSP]",
-            -- look = "[Dict]",
-            -- buffer = "[Buffer]",
-            -- luasnip = "[SNIP]"
 
 
 

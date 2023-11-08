@@ -57,6 +57,6 @@ km('n', '<leader>ht', ':Telescope help_tags<cr>', opts)
 km('n', '<leader>fh', ':Telescope oldfiles<cr>', opts)
 km('n', '<leader>cc', ':Telescope colorscheme<cr>', opts)
 km('n', '<leader>gf', ':Telescope git_files<cr>', opts )
-km('n', '<c-z>', ':Telescope file_browser<cr>', opts)
+km('n', '<leader>fb', ':Telescope file_browser path=%:p:h select_buffer=true<cr>', opts)
 
 
