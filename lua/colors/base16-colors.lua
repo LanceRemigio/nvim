@@ -7,4 +7,4 @@ require('base16-colorscheme').with_config({
     illuminate = true,
 })
 
-vim.cmd("colorscheme base16-nord")
+vim.cmd("colorscheme base16-material")

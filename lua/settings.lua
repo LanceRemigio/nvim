@@ -1,4 +1,3 @@
-
 local set = vim.opt
 local let = vim.g
 

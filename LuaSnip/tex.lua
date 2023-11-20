@@ -140,7 +140,14 @@ s({trig = 'lm', snippetType = 'autosnippet'}, fmta('\\lim <>', {i(1)})),
 
 s({trig = 'sum', snippetType = 'autosnippet'}, fmta('\\sum <>', {i(1)}), {condition = in_mathzone}),
 
-s({trig = 'sp', snippetType = 'autosnippet'}, fmta('\\sup <>', {i(1)}), {condition = in_mathzone}),
+s(
+    {
+        trig = 'sp', 
+    }, 
+    fmta('\\sup <>', {i(1)}), 
+    {
+        condition = in_mathzone
+    }),
 
 s({ trig = 'dd', snippetType = 'autosnippet'}, fmta("\\frac{d <> }{d <> } ", {i(1), i(2)})),
 
@@ -231,7 +238,7 @@ s(
     },
     fmta(
         [[
-            \begin{definition}{<>}{}
+            \begin{definition}[<>]
                 <>
             \end{definition}
         ]], 
@@ -247,7 +254,7 @@ s(
     "thm",
     fmta(
         [[
-            \begin{theorem}{<>}{}
+            \begin{theorem}[<>]
                 <>
             \end{theorem}
         ]], 
@@ -262,7 +269,7 @@ s(
     "lem",
     fmta(
         [[
-            \begin{lemma}{<>}{}
+            \begin{lemma}[<>]
                 <>
             \end{lemma}
         ]], 
@@ -546,6 +553,33 @@ s(
     }
 ),
 
+
+s(
+    {
+        trig = 'tr',
+        snippetType = "autosnippet"
+    },
+    fmta(
+        [[\text{tr}(<>)]],
+        {i(1)}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+s(
+    {
+        trig = 'spn'
+    },
+    fmta(
+        [[ \text{span}(<>)]],
+        {i(1)}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
 
 
 
