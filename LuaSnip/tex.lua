@@ -195,7 +195,7 @@ s(
         snippetType = "autosnippet"
     }, 
     fmta( 
-        "\\delta", 
+        [[\delta]], 
         {}
     ), 
     { 
@@ -581,6 +581,30 @@ s(
     }
 ),
 
+
+s(
+    {
+        trig = 'ref'
+    },
+    fmta(
+        [[ {\hyperref[<>]{<>}} ]],
+        {i(1), i(2)}
+    )
+),
+
+
+s(
+    {
+        trig = 'dim'
+    },
+    fmta(
+        [[\text{dim}(<>)]],
+        {i(1)}
+    ),
+    {
+        condition = in_mathzone
+    }
+)
 
 
 

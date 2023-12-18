@@ -37,15 +37,17 @@ return require('packer').startup(function(use)
     use 'shaunsingh/nord.nvim'
     use 'EdenEast/nightfox.nvim'
     use 'lewpoly/sherbet.nvim'
+    use 'kvrohit/mellow.nvim'
     use 'RRethy/nvim-base16'
     use 'projekt0n/github-nvim-theme'
     use 'catppuccin/nvim'
     use 'rmehri01/onenord.nvim'
+    use 'bluz71/vim-moonfly-colors'
     -- use 'xiyaowong/transparent.nvim'
     -- Tools --
     use 'tpope/vim-commentary'
     -- use 'vimwiki/vimwiki'
-    use 'lukas-reineke/indent-blankline.nvim'
+    -- use 'lukas-reineke/indent-blankline.nvim'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
@@ -58,10 +60,11 @@ return require('packer').startup(function(use)
     use 'windwp/nvim-autopairs'
     use 'L3MON4D3/Luasnip'
     use 'saadparwaiz1/cmp_luasnip' 
-    use 'Pocco81/auto-save.nvim'
     use 'lervag/vimtex'
+    -- use 'Pocco81/auto-save.nvim'
     use 'tpope/vim-dadbod'
     use 'kristijanhusak/vim-dadbod-ui'
+    use 'frabjous/knap'
  if packer_bootstrap then
     require('packer').sync()
  end
