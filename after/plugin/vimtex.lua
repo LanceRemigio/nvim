@@ -14,7 +14,7 @@ let.vimtex_quickfix_open_on_warning = 0
 set.conceallevel = 0
 let.vimtex_fold_enabled = 0
 let.vimtex_fold_manual = 0
-let.vitmex_delim_stopline = 10
+let.vitmex_delim_stopline = 5
 
 
 
