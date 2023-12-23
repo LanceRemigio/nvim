@@ -18,7 +18,7 @@ return require('packer').startup(function(use)
     use 'nvim-lua/plenary.nvim'
     use 'ryanoasis/vim-devicons'
     use 'kyazdani42/nvim-web-devicons'
-    use 'nvim-lualine/lualine.nvim'
+    -- use 'nvim-lualine/lualine.nvim'
     use 'nvim-treesitter/nvim-treesitter'
     use 'akinsho/toggleterm.nvim'
     use 'glepnir/lspsaga.nvim'
@@ -27,13 +27,11 @@ return require('packer').startup(function(use)
     -- Navigation -- 
     use 'nvim-telescope/telescope.nvim'
     use 'ThePrimeagen/harpoon'
-    -- use 'junegunn/fzf.vim'
     use {
         "nvim-telescope/telescope-file-browser.nvim",
         requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
     }
     -- Themes/UI elements
-    -- use 'goolord/alpha-nvim'
     use 'shaunsingh/nord.nvim'
     use 'EdenEast/nightfox.nvim'
     use 'lewpoly/sherbet.nvim'
@@ -46,8 +44,6 @@ return require('packer').startup(function(use)
     -- use 'xiyaowong/transparent.nvim'
     -- Tools --
     use 'tpope/vim-commentary'
-    -- use 'vimwiki/vimwiki'
-    -- use 'lukas-reineke/indent-blankline.nvim'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
@@ -61,7 +57,6 @@ return require('packer').startup(function(use)
     use 'L3MON4D3/Luasnip'
     use 'saadparwaiz1/cmp_luasnip' 
     use 'lervag/vimtex'
-    -- use 'Pocco81/auto-save.nvim'
     use 'tpope/vim-dadbod'
     use 'kristijanhusak/vim-dadbod-ui'
     use 'frabjous/knap'
