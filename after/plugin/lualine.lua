@@ -1,5 +1,6 @@
 local devicons_available, devicons = pcall(require, 'nvim-web-devicons')
-local modes = {
+local Mode = {}
+Mode.map = {
   ["n"] = "NORMAL",
   ["no"] = "NORMAL",
   ["v"] = "VISUAL",
@@ -33,7 +34,10 @@ end
 
 local function mode()
     local current_mode = vim.api.nvim_get_mode().mode
-    return string.format(" %s ", modes[current_mode]:upper())
+    if Mode.map[current_mode] == nil then
+        return current_mode
+    end
+    return string.format(' %s ', Mode.map[current_mode])
 end
 
 local function update_mode_colors()
@@ -101,17 +105,18 @@ Statusline = {}
 Statusline.active = function()
   return table.concat {
     "%#Statusline#",
-    update_mode_colors(),
     mode(),
+    -- update_mode_colors(),
     git_branch(),
     "%#Normal# ",
+    get_icon(),
+    filetype(),
+    "%=%",
     filepath(),
     filename(),
     "%#Normal#",
     "%=%#StatusLineExtra#",
     fileformat,
-    get_icon(),
-    filetype(),
     lineinfo(),
   }
 end
