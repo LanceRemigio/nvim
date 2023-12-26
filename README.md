@@ -28,5 +28,5 @@ nvim init.lua
 
 ![editing a tex file](./png/edittexfile.png)
 
-![editing a python file](./png/editpyfile.png)
+![editing a python file](./png/code.png)
 
