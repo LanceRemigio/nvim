@@ -63,7 +63,7 @@ s(
         snippetType = 'autosnippet'
     },
     fmta(
-    "\\setmminus <>", 
+    "\\setminus <>", 
     {i(1)}
     ),
     {
@@ -98,9 +98,7 @@ s(
     {condition = in_mathzone}
 ),
 
-s({trig = 'nu', snippetType = 'autosnippet'}, fmta("<>^<>", {i(1), i(2)}), {condition = in_mathzone}),
 
-s({trig = 'nl', snippetType = 'autosnippet'}, fmta("<>_<>", {i(1), i(2)}), {condition = in_mathzone}),
 
 s({trig = 'sd', snippetType = 'autosnippet'}, fmta("<> + <> + \\dots + <>", {i(1), i(2), i(3)}), {condition = in_mathzone}),
 
@@ -606,9 +604,32 @@ s(
     }
 ),
 
+s(
+    {
+        trig = 'null'
+    },
+    fmta(
+        [[\text{nullity}(<>)]],
+        {i(1)}
+    ),
+    {
+        condition = in_mathzone
+    }
 
+),
 
-
+s(
+    {
+        trig = 'rnn'
+    },
+    fmta(
+        [[\text{rank}(<>)]],
+        {i(1)}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
 
 
 }

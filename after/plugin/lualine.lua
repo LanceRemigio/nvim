@@ -1,5 +1,7 @@
 local devicons_available, devicons = pcall(require, 'nvim-web-devicons')
+
 local Mode = {}
+
 Mode.map = {
   ["n"] = "NORMAL",
   ["no"] = "NORMAL",
@@ -26,7 +28,7 @@ Mode.map = {
 local function git_branch()
     local branch = vim.fn.system(" git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n' ")
     if string.len(branch) > 0 then
-        return string.format("  %s ", branch:lower())
+        return string.format("  %s ", branch:lower())
     else
         return ""
     end
@@ -84,7 +86,7 @@ local function lineinfo()
   if vim.bo.filetype == "alpha" then
     return ""
   end
-  return "%P  %l:%c "
+  return " %P    %l:%c "
 end
 
 function get_icon()
@@ -96,9 +98,9 @@ function get_icon()
     end
 end
 
--- local fileencoding = " [%{&fileencoding?&fileencoding:&encoding}]"
+local fileencoding = " %{&fileencoding?&fileencoding:&encoding}  "
 
-local fileformat = " %{&fileformat} "
+local fileformat = "%{&fileformat} "
 
 Statusline = {}
 
@@ -106,18 +108,18 @@ Statusline.active = function()
   return table.concat {
     "%#Statusline#",
     mode(),
-    -- update_mode_colors(),
     git_branch(),
-    "%#Normal# ",
-    get_icon(),
-    filetype(),
+    "%#StatusLine#",
     "%=%",
     filepath(),
     filename(),
-    "%#Normal#",
-    "%=%#StatusLineExtra#",
+    "%=%#StatusLine#",
+    get_icon(),
+    filetype(),
+    fileencoding,
     fileformat,
     lineinfo(),
+    "%#Normal#",
   }
 end
 
