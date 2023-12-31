@@ -39,7 +39,7 @@ local function mode()
     if Mode.map[current_mode] == nil then
         return current_mode
     end
-    return string.format(' %s ', Mode.map[current_mode])
+    return string.format(' -- %s -- ', Mode.map[current_mode])
 end
 
 local function update_mode_colors()
@@ -78,6 +78,14 @@ local function filename()
   return fname .. " "
 end
 
+local function is_modified()
+    if vim.bo.modified then
+        return '[+]'
+    else 
+        return ''
+    end
+end
+
 local function filetype()
     return string.format(" %s ", vim.bo.filetype):lower()
 end
@@ -86,11 +94,11 @@ local function lineinfo()
   if vim.bo.filetype == "alpha" then
     return ""
   end
-  return " %P    %l:%c "
+  return " %P   %l:%c "
 end
 
 function get_icon()
-    local default_file_icon = "󰈔"
+    local default_file_icon = "󰈔 [No Name]"
     if devicons_available then
         return (devicons.get_icon_by_filetype(vim.bo.filetype)) or default_file_icon
     else
@@ -98,7 +106,7 @@ function get_icon()
     end
 end
 
-local fileencoding = " %{&fileencoding?&fileencoding:&encoding}  "
+local fileencoding = "  %{&fileencoding?&fileencoding:&encoding}  "
 
 local fileformat = "%{&fileformat} "
 
@@ -107,22 +115,21 @@ Statusline = {}
 Statusline.active = function()
   return table.concat {
     "%#Statusline#",
-    mode(),
     git_branch(),
+    mode(),
     "%#StatusLine#",
-    "%=%",
-    filepath(),
+    "%=",
     filename(),
+    is_modified(),
     "%=%#StatusLine#",
-    get_icon(),
     filetype(),
+    get_icon(),
     fileencoding,
     fileformat,
     lineinfo(),
     "%#Normal#",
   }
 end
-
 function Statusline.inactive()
   return " %F"
 end

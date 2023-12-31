@@ -19,7 +19,6 @@ return require('packer').startup(function(use)
     use 'ryanoasis/vim-devicons'
     use 'kyazdani42/nvim-web-devicons'
     use 'nvim-treesitter/nvim-treesitter'
-    use 'akinsho/toggleterm.nvim'
     use 'glepnir/lspsaga.nvim'
     use 'onsails/lspkind.nvim'
     use 'andweeb/presence.nvim'
@@ -33,13 +32,9 @@ return require('packer').startup(function(use)
     -- Themes/UI elements
     use 'shaunsingh/nord.nvim'
     use 'EdenEast/nightfox.nvim'
-    use 'lewpoly/sherbet.nvim'
-    use 'kvrohit/mellow.nvim'
-    use 'RRethy/nvim-base16'
-    use 'projekt0n/github-nvim-theme'
     use 'catppuccin/nvim'
     use 'rmehri01/onenord.nvim'
-    use 'bluz71/vim-moonfly-colors'
+    use 'rose-pine/neovim'
     -- use 'xiyaowong/transparent.nvim'
     -- Tools --
     use 'tpope/vim-commentary'

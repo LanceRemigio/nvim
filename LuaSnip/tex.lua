@@ -327,13 +327,12 @@ s({trig = "prf", snippetType="autosnippet"},
 s("sol",
   fmta(
     [[
-      \begin{proof}[Solution]
+      \begin{solution}
       <>
-      \end{proof}<>
+      \end{solution}
     ]],
     {
-      i(1),
-      i(0)
+      i(1)
     }
   )
 ),
@@ -630,6 +629,12 @@ s(
         condition = in_mathzone
     }
 ),
+
+
+
+
+
+
 
 
 }
