@@ -110,6 +110,10 @@ local fileencoding = "  %{&fileencoding?&fileencoding:&encoding}  "
 
 local fileformat = "%{&fileformat} "
 
+-- vim.cmd[[
+--     hi Statusline guibg = '#5e81ac'
+-- ]]
+
 Statusline = {}
 
 Statusline.active = function()

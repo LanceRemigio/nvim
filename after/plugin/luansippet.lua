@@ -15,15 +15,15 @@ ext_opts = {
     },
 },
 }
-    
-vim.keymap.set( 'i', "kk", function()
+
+vim.keymap.set('i', "kk", function()
     if ls.expand_or_jumpable() then
             ls.expand_or_jump()
     end
-            end, {noremap = true, silent = true})
+            end, {silent = true})
 
 -- Jumping backwards 
-vim.keymap.set( 'i', 'jj', function()
+vim.keymap.set('i', 'jj', function()
         if ls.jumpable(-1) then
             ls.jump(-1)
         end

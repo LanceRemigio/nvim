@@ -37,11 +37,6 @@ s('it', fmta('\\textit{<>} ', {i(1)})),
 
 s({trig = "lim", snippetType = "autosnippet"}, fmta("\\lim_{ <> \\to <> } ", {i(1), i(2)}), {condition = in_mathzone}),
 
-
-
-
-
-
 s(
     {
         trig = 'sb',
@@ -103,7 +98,7 @@ s(
 s({trig = 'sd', snippetType = 'autosnippet'}, fmta("<> + <> + \\dots + <>", {i(1), i(2), i(3)}), {condition = in_mathzone}),
 
 s({trig = 'eps', snippetType = 'autosnippet'},
-fmta("\\epsilon <>", {i(1)}),
+fmta([[\epsilon]], {}),
 {condition = in_mathzone}
 ),
 
@@ -401,21 +396,10 @@ s({trig = "txt", snippetType = "autosnippet"}, fmta("\\text{<>}", {i(1)}), {cond
 s({trig = "ss", snippetType = "autosnippet"}, fmta("<>^{<>}", {i(1), i(2)}), {condition = in_mathzone}),
 
 
-s({trig = "ll", snippetType = "autosnippet"}, fmta("<>_{<>}", {i(1), i(2)}), {condition = in_mathzone}),
-
 s(
-    {
-        trig = "ve",
-        snippetType = "autosnippet"
-    }, 
-    fmta(
-       "\\varepsilon", 
-       {}
-    ), 
-    { 
-        condition = in_mathzone
-    }
-),
+    {trig = "ll", snippetType = "autosnippet"}, 
+    fmta("{<>}_{<>}", {i(1), i(2)}), {condition = in_mathzone}
+    ),
 
 s( 
     { 

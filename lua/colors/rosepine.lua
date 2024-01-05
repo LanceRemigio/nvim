@@ -1,8 +1,8 @@
 require('rose-pine').setup({
 	--- @usage 'auto'|'main'|'moon'|'dawn'
-	variant = 'moon',
+	variant = 'main',
 	--- @usage 'main'|'moon'|'dawn'
-	dark_variant = 'moon',
+	dark_variant = 'main',
 	bold_vert_split = false,
 	dim_nc_background = false,
 	disable_background = true,

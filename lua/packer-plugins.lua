@@ -35,6 +35,8 @@ return require('packer').startup(function(use)
     use 'catppuccin/nvim'
     use 'rmehri01/onenord.nvim'
     use 'rose-pine/neovim'
+    use 'Mofiqul/vscode.nvim'
+    use 'ellisonleao/gruvbox.nvim'
     -- use 'xiyaowong/transparent.nvim'
     -- Tools --
     use 'tpope/vim-commentary'
