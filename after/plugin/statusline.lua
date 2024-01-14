@@ -73,7 +73,7 @@ end
 local function filename()
   local fname = vim.fn.expand "%:t"
   if fname == "" then
-      return ""
+      return " 󰈔 "
   end
   return fname .. " "
 end
@@ -98,7 +98,7 @@ local function lineinfo()
 end
 
 function get_icon()
-    local default_file_icon = "󰈔 [No Name]"
+    local default_file_icon = "[No Name]"
     if devicons_available then
         return (devicons.get_icon_by_filetype(vim.bo.filetype)) or default_file_icon
     else
@@ -111,7 +111,7 @@ local fileencoding = "  %{&fileencoding?&fileencoding:&encoding}  "
 local fileformat = "%{&fileformat} "
 
 -- vim.cmd[[
---     hi Statusline guibg = '#5e81ac'
+--     hi Statusline guibg = none
 -- ]]
 
 Statusline = {}

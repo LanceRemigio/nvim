@@ -8,5 +8,6 @@ vim.cmd[[:NoMatchParen]]
 
 
 set('n', '<leader>r', ':VimtexCompile<cr>', {buffer = true })
+set('n', '<leader>vv', '<cmd>VimtexView<cr>', {buffer = true})
 
 

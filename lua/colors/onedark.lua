@@ -8,9 +8,6 @@ require('onedark').setup {
         strings = 'italic',
         variables = 'bold'
     },
-    lualine = { 
-        transparent = true,
-    },
 }
 
 require('onedark').load()

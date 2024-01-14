@@ -5,7 +5,7 @@ require("harpoon").setup({ ... })
 
 km('n', "<leader>a", ":lua require('harpoon.mark').add_file()<cr>", {noremap = true})
 
-km('n', "<leader>h", ":lua require('harpoon.ui').toggle_quick_menu() <cr>", {noremap= true})
+km('n', "<A-h>", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", {noremap= true})
 
 km('n', "<A-1>", ":lua require('harpoon.ui').nav_file(1)<cr>", {noremap = true })
 km('n', "<A-2>", ":lua require('harpoon.ui').nav_file(2)<cr>", {noremap = true } )

@@ -8,6 +8,7 @@ local ensure_packer = function()
   end
   return false
 end
+
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
@@ -30,13 +31,13 @@ return require('packer').startup(function(use)
         requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
     }
     -- Themes/UI elements
-    use 'shaunsingh/nord.nvim'
+    -- use 'shaunsingh/nord.nvim'
     use 'EdenEast/nightfox.nvim'
-    use 'catppuccin/nvim'
-    use 'rmehri01/onenord.nvim'
-    use 'rose-pine/neovim'
-    use 'Mofiqul/vscode.nvim'
-    use 'ellisonleao/gruvbox.nvim'
+    use 'navarasu/onedark.nvim'
+    use {
+        "rockyzhang24/arctic.nvim",
+        requires = { "rktjmp/lush.nvim" }
+    }
     -- use 'xiyaowong/transparent.nvim'
     -- Tools --
     use 'tpope/vim-commentary'
