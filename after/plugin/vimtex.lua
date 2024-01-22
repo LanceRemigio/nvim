@@ -11,6 +11,7 @@ set.conceallevel = 0
 let.vimtex_fold_enabled = 0
 let.vimtex_fold_manual = 0
 let.vitmex_delim_stopline = 5
+-- let.vimtex_syntax_enabled = 0
 
 -- vim.g.vimtex_imaps_disabled = 1
 

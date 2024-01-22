@@ -94,7 +94,7 @@ local function lineinfo()
   if vim.bo.filetype == "alpha" then
     return ""
   end
-  return " %P   %l:%c "
+  return "  %P   %l:%c "
 end
 
 function get_icon()
@@ -111,7 +111,7 @@ local fileencoding = "  %{&fileencoding?&fileencoding:&encoding}  "
 local fileformat = "%{&fileformat} "
 
 -- vim.cmd[[
---     hi Statusline guibg = none
+--     hi Statusline guibg = 
 -- ]]
 
 Statusline = {}
@@ -126,10 +126,10 @@ Statusline.active = function()
     filename(),
     is_modified(),
     "%=%#StatusLine#",
-    filetype(),
     get_icon(),
-    fileencoding,
-    fileformat,
+    filetype(),
+    -- fileencoding,
+    -- fileformat,
     lineinfo(),
     "%#Normal#",
   }

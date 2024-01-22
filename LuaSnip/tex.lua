@@ -171,7 +171,7 @@ s({trig = 'sm', snippetType = 'autosnippet'}, fmta('\\sum_{ <> }^{ <> }', {i(1),
 s({trig = 'vc', snippetType = 'autosnippet'}, fmta('\\vec{ <> } ', {i(1)}), {condition = in_mathzone}),
 
 
-s({trig = 'lt', snippetType = 'autosnippet'}, fmta("\\leq <>", {i(1)}), {condition = in_mathzone}),
+-- s({trig = 'lt', snippetType = 'autosnippet'}, fmta("\\leq <>", {i(1)}), {condition = in_mathzone}),
 
 s({trig = 'cl', snippetType = 'autosnippet'}, fmta("\\overline{<>}", {i(1)}), {condition = in_mathzone}),
 
@@ -512,7 +512,7 @@ s(
 s(
     "exer",
     fmta(
-        "\\subsubsection{Exercise <>.<>.<>}",
+        "\\subsection*{Exercise <>.<>.<>}",
         {
             i(1), i(2), i(3)
         }
@@ -628,6 +628,36 @@ s(
 ),
 
 
+s(
+    {
+        trig = 'mre'
+    }, 
+    fmta(
+        [[ [<>]_{<>}]],
+        {
+            i(1), i(2)
+        }
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+s(
+    {
+        trig = 'lt',
+        desc = 'Linear Transformation Notation'
+    },
+    fmta(
+        [[ \mathcal{L}(<>,<>) ]],
+        {
+            i(1), i(2)
+        }
+    ),
+    {
+        condition = in_mathzone
+    }
+),
 
 
 

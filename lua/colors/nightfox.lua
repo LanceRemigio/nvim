@@ -18,15 +18,15 @@ require('nightfox').setup({
     },
     styles = {               -- Style to be applied to different syntax groups
       comments = "italic",     -- Value is any valid attr-list value `:help attr-list`
-      conditionals = "NONE",
+      conditionals = "bold",
       constants = "NONE",
       functions = "bold",
-      keywords = "bold",
+      keywords = "NONE",
       numbers = "NONE",
       operators = "NONE",
       strings = "italic",
-      types = "NONE",
-      variables = "bold",
+      types = "bold",
+      variables = "NONE",
     },
     inverse = {             -- Inverse highlight for different types
       match_paren = false,
@@ -37,8 +37,43 @@ require('nightfox').setup({
       -- ...
     },
   },
-  palettes = {},
-  specs = {},
+  palettes = {
+          nordfox = {
+     -- Each palette defines these colors:
+    --   black, red, green, yellow, blue, magenta, cyan, white, orange, pink
+    -- A palette also defines the following:
+    --   bg0, bg1, bg2, bg3, bg4, fg0, fg1, fg2, fg3, sel0, sel1, comment
+    --
+    -- These are the different foreground and background shades used by the theme.
+    -- The base bg and fg is 1, 0 is normally the dark alternative. The others are
+    -- incrementally lighter versions.
+    bg1 = "#2e3440",
+    -- bg1 = '#2f3440',
+
+    -- sel is different types of selection colors.
+    sel0 = "#3e4a5b", -- Popup bg, visual selection bg
+    sel1 = "#4f6074", -- Popup sel bg, search bg
+    -- comment is the definition of the comment color.
+    comment = "#60728a",
+  },
+  },
+  specs = {
+       nordfox = {
+           black = '#2e3440',
+           red = '#bf616a',
+           green = '#a3be8c',
+           -- yellow = ,
+           -- blue ,
+           -- magenta = ,
+           -- cyan = , 
+          -- white = ,
+          -- orange = ,
+          -- pink,
+       },
+
+
+
+  },
   groups = {},
 })
 

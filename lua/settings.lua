@@ -20,5 +20,3 @@ set.clipboard = 'unnamedplus'
 set.showmode = false
 set.swapfile = false
 set.laststatus = 3
-
-

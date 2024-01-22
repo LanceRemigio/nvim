@@ -38,6 +38,7 @@ return require('packer').startup(function(use)
         "rockyzhang24/arctic.nvim",
         requires = { "rktjmp/lush.nvim" }
     }
+    use 'tokyonight.nvim'
     -- use 'xiyaowong/transparent.nvim'
     -- Tools --
     use 'tpope/vim-commentary'

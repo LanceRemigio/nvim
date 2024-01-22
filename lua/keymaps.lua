@@ -33,10 +33,18 @@ km('n', '<leader>pc', ':PackerClean<cr>', {noremap = true})
 
 km('n', '<leader>mp', ':MarkdownPreview<cr>', {noremap = true})
 
-km('n', "<c-l>", ':bnext<cr>', {noremap=true}) 
+km('n', "<c-l>", ':bnext<cr>zz', {noremap=true}) 
 
-km('n', "<c-h>", ':bprevious<cr>', {noremap=true})
- 
+km('n', "<c-h>", ':bprevious<cr>zz', {noremap=true})
+
+km('n', '<S-h>', '<S-h>zz', {noremap = true} )
+
+km('n', '<S-l>', '<S-l>zz', {noremap = true})
+
+km('n', '<S-m>', '<S-m>zz', {noremap = true})
+
+km('n', 'G', 'Gzz', {noremap = true})
+
 km('n', "bd", ":bdelete<cr>", {noremap = true})
 
 km('n', '<leader>db', ':DBUIToggle<cr>', {noremap =true})
