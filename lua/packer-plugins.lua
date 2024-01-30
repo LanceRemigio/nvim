@@ -32,14 +32,14 @@ return require('packer').startup(function(use)
     }
     -- Themes/UI elements
     -- use 'shaunsingh/nord.nvim'
+    use 'andersevenrud/nordic.nvim'
     use 'EdenEast/nightfox.nvim'
-    use 'navarasu/onedark.nvim'
+    use 'savq/melange-nvim'
+    use 'rebelot/kanagawa.nvim'
     use {
         "rockyzhang24/arctic.nvim",
         requires = { "rktjmp/lush.nvim" }
     }
-    use 'tokyonight.nvim'
-    -- use 'xiyaowong/transparent.nvim'
     -- Tools --
     use 'tpope/vim-commentary'
     use 'hrsh7th/cmp-nvim-lsp'

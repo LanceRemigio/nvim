@@ -111,7 +111,7 @@ local fileencoding = "  %{&fileencoding?&fileencoding:&encoding}  "
 local fileformat = "%{&fileformat} "
 
 -- vim.cmd[[
---     hi Statusline guibg = 
+--     hi Statusline guibg = 'None' 
 -- ]]
 
 Statusline = {}

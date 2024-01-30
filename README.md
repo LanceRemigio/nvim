@@ -5,13 +5,13 @@
 * Requires version 0.9.0+
 * OS: Ubuntu 22.03
 * Termimal: Alacritty
-* Font: JetBrains Mono Nerd Font https://www.nerdfonts.com/font-downloads
-* Colorscheme: Sherbet
+* Font in Screenshot: FiraCode https://www.nerdfonts.com/font-downloads
+* Colorscheme: Melange
 * PDF Viewer: Sioyek/Zathura (or SumatraPDF if you're on Windows)
 * Snippets: Luasnip
 * Completion: nvim-cmp
 
-# Installation
+## Installation
 
 First, install the dependencies and pdf-viewer. Since I'm on Ubuntu, the package manager is apt:
 
@@ -24,9 +24,8 @@ git clone https://github.com/LanceRemigio/nvim
 cd nvim 
 nvim init.lua
 ````
-# Screenshots
+## Screenshot
 
-![editing a tex file](./png/edittexfile.png)
+![editing a tex file](./png/newscreenshot.png)
 
-![editing a python file](./png/code.png)
 

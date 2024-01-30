@@ -45,6 +45,10 @@ km('n', '<S-m>', '<S-m>zz', {noremap = true})
 
 km('n', 'G', 'Gzz', {noremap = true})
 
+km('n', 'n', 'nzz', {noremap = true}) 
+
+km('n', '<S-n>', '<S-n>zz', {noremap = true})
+
 km('n', "bd", ":bdelete<cr>", {noremap = true})
 
 km('n', '<leader>db', ':DBUIToggle<cr>', {noremap =true})
