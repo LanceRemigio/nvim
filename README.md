@@ -39,7 +39,7 @@ nvim init.lua
 ````
 ## Screenshot
 
-![editing a tex file](./png/edittexfile.png)
+![editing a tex file](./png/texediting.png)
 
 ![editing code](./png/code.png)
 
