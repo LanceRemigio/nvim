@@ -1,7 +1,6 @@
-
 # nvim
 
- This setup is optimized for writing notes and doing homework in LaTeX. 
+This setup is optimized for writing notes and doing homework in LaTeX. 
 * Requires version 0.9.0+
 * OS: Ubuntu 22.03
 * Termimal: Alacritty
@@ -40,6 +39,8 @@ nvim init.lua
 ````
 ## Screenshot
 
-![editing a tex file](./png/editinglatex.png)
+![editing a tex file](./png/edittexfile.png)
+
+![editing code](./png/code.png)
 
 
