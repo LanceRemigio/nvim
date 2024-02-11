@@ -20,3 +20,5 @@ set.clipboard = 'unnamedplus'
 set.showmode = false
 set.swapfile = false
 set.laststatus = 3
+set.signcolumn = 'yes'
+set.updatetime = 50

@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/lance/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/lance/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/lance/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/lance/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/lance/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/lance/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?.lua;/home/lance/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?/init.lua;/home/lance/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?.lua;/home/lance/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/lance/.cache/nvim/packer_hererocks/2.1.1692716794/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -79,10 +79,10 @@ _G.packer_plugins = {
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/Luasnip",
     url = "https://github.com/L3MON4D3/Luasnip"
   },
-  ["auto-save.nvim"] = {
+  ["arctic.nvim"] = {
     loaded = true,
-    path = "/home/lance/.local/share/nvim/site/pack/packer/start/auto-save.nvim",
-    url = "https://github.com/Pocco81/auto-save.nvim"
+    path = "/home/lance/.local/share/nvim/site/pack/packer/start/arctic.nvim",
+    url = "https://github.com/rockyzhang24/arctic.nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
@@ -109,20 +109,20 @@ _G.packer_plugins = {
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["github-nvim-theme"] = {
-    loaded = true,
-    path = "/home/lance/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
-    url = "https://github.com/projekt0n/github-nvim-theme"
-  },
   harpoon = {
     loaded = true,
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
   },
-  ["indent-blankline.nvim"] = {
+  ["kanagawa.nvim"] = {
     loaded = true,
-    path = "/home/lance/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
-    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+    path = "/home/lance/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
+    url = "https://github.com/rebelot/kanagawa.nvim"
+  },
+  knap = {
+    loaded = true,
+    path = "/home/lance/.local/share/nvim/site/pack/packer/start/knap",
+    url = "https://github.com/frabjous/knap"
   },
   ["lspkind.nvim"] = {
     loaded = true,
@@ -134,40 +134,35 @@ _G.packer_plugins = {
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
     url = "https://github.com/glepnir/lspsaga.nvim"
   },
-  ["lualine.nvim"] = {
+  ["lush.nvim"] = {
     loaded = true,
-    path = "/home/lance/.local/share/nvim/site/pack/packer/start/lualine.nvim",
-    url = "https://github.com/nvim-lualine/lualine.nvim"
+    path = "/home/lance/.local/share/nvim/site/pack/packer/start/lush.nvim",
+    url = "https://github.com/rktjmp/lush.nvim"
   },
   ["markdown-preview.nvim"] = {
     loaded = true,
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
+  ["melange-nvim"] = {
+    loaded = true,
+    path = "/home/lance/.local/share/nvim/site/pack/packer/start/melange-nvim",
+    url = "https://github.com/savq/melange-nvim"
+  },
   ["nightfox.nvim"] = {
     loaded = true,
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
     url = "https://github.com/EdenEast/nightfox.nvim"
   },
-  ["nord.nvim"] = {
+  ["nordic.nvim"] = {
     loaded = true,
-    path = "/home/lance/.local/share/nvim/site/pack/packer/start/nord.nvim",
-    url = "https://github.com/shaunsingh/nord.nvim"
-  },
-  nvim = {
-    loaded = true,
-    path = "/home/lance/.local/share/nvim/site/pack/packer/start/nvim",
-    url = "https://github.com/catppuccin/nvim"
+    path = "/home/lance/.local/share/nvim/site/pack/packer/start/nordic.nvim",
+    url = "https://github.com/andersevenrud/nordic.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
-  },
-  ["nvim-base16"] = {
-    loaded = true,
-    path = "/home/lance/.local/share/nvim/site/pack/packer/start/nvim-base16",
-    url = "https://github.com/RRethy/nvim-base16"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -194,11 +189,6 @@ _G.packer_plugins = {
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
-  ["onenord.nvim"] = {
-    loaded = true,
-    path = "/home/lance/.local/share/nvim/site/pack/packer/start/onenord.nvim",
-    url = "https://github.com/rmehri01/onenord.nvim"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -214,11 +204,6 @@ _G.packer_plugins = {
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/presence.nvim",
     url = "https://github.com/andweeb/presence.nvim"
   },
-  ["sherbet.nvim"] = {
-    loaded = true,
-    path = "/home/lance/.local/share/nvim/site/pack/packer/start/sherbet.nvim",
-    url = "https://github.com/lewpoly/sherbet.nvim"
-  },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
@@ -228,11 +213,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["toggleterm.nvim"] = {
-    loaded = true,
-    path = "/home/lance/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
-    url = "https://github.com/akinsho/toggleterm.nvim"
   },
   ["vim-commentary"] = {
     loaded = true,

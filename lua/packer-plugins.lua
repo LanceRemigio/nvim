@@ -17,7 +17,6 @@ return require('packer').startup(function(use)
     use 'williamboman/nvim-lsp-installer'
     use 'neovim/nvim-lspconfig'
     use 'nvim-lua/plenary.nvim'
-    use 'ryanoasis/vim-devicons'
     use 'kyazdani42/nvim-web-devicons'
     use 'nvim-treesitter/nvim-treesitter'
     use 'glepnir/lspsaga.nvim'
@@ -31,11 +30,8 @@ return require('packer').startup(function(use)
         requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
     }
     -- Themes/UI elements
-    -- use 'shaunsingh/nord.nvim'
-    use 'andersevenrud/nordic.nvim'
     use 'EdenEast/nightfox.nvim'
-    use 'savq/melange-nvim'
-    use 'rebelot/kanagawa.nvim'
+    use 'rose-pine/neovim'
     use {
         "rockyzhang24/arctic.nvim",
         requires = { "rktjmp/lush.nvim" }
@@ -47,10 +43,7 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-cmdline'
-    use({
-        "iamcco/markdown-preview.nvim",
-        run = function() vim.fn() end,
-    })   
+    use 'iamcco/markdown-preview.nvim'
     use 'windwp/nvim-autopairs'
     use 'L3MON4D3/Luasnip'
     use 'saadparwaiz1/cmp_luasnip' 
