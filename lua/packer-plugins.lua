@@ -22,6 +22,10 @@ return require('packer').startup(function(use)
     use 'glepnir/lspsaga.nvim'
     use 'onsails/lspkind.nvim'
     use 'andweeb/presence.nvim'
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
     -- Navigation -- 
     use 'nvim-telescope/telescope.nvim'
     use 'ThePrimeagen/harpoon'
@@ -31,7 +35,11 @@ return require('packer').startup(function(use)
     }
     -- Themes/UI elements
     use 'EdenEast/nightfox.nvim'
-    use 'rose-pine/neovim'
+    use 'navarasu/onedark.nvim'
+    use 'savq/melange-nvim'
+    use 'sainnhe/gruvbox-material'
+    use 'rebelot/kanagawa.nvim'
+    use 'rmehri01/onenord.nvim'
     use {
         "rockyzhang24/arctic.nvim",
         requires = { "rktjmp/lush.nvim" }
@@ -49,7 +57,6 @@ return require('packer').startup(function(use)
     use 'lervag/vimtex'
     use 'tpope/vim-dadbod'
     use 'kristijanhusak/vim-dadbod-ui'
-    use 'frabjous/knap'
  if packer_bootstrap then
     require('packer').sync()
  end

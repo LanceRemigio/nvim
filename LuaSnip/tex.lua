@@ -242,7 +242,6 @@ s(
 ),
 
 
-
 s(
     "thm",
     fmta(
@@ -659,7 +658,184 @@ s(
     }
 ),
 
+s(
+    {
+        trig = 'det',
+        desc = 'Determinant'
+    },
+    fmta(
+        [[ \text{det}<>]],
+        {
+            i(1)
+        }
+    ),
+    {
+        condition = in_mathzone
+    }
+),
 
+s(
+    {
+        trig = 'pmat',
+        desc = 'Parentheses Matrix'
+    },
+    fmta(
+        [[ \begin{pmatrix} 
+            <>
+           \end{pmatrix} 
+        ]],
+        {
+            i(1)
+        }
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+
+s(
+    {
+        trig = 'tt',
+        snippetType = 'autosnippet',
+        desc = 'times'
+    },
+    fmta(
+        [[\times]],
+        {
+
+        }
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+s(
+    {
+        trig = 'gg',
+        desc = '\\geq',
+        snippetType = 'autosnippet'
+    },
+    fmta(
+        [[\geq]],
+        {
+
+        }
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+s(
+    {
+        trig = 'tld',
+        desc = 'tilde'
+    },
+    fmta(
+        [[\tilde{<>}]],
+        {
+            i(1)
+        }
+    ),
+    { 
+      condition =  in_mathzone
+    }
+),
+
+s(
+    {
+        trig = 'vd',
+        snippetType = 'autosnippet',
+        desc = 'vdots'
+    },
+    fmta(
+        [[\vdots]],
+        {}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+s(
+    {
+        trig = 'dmt',
+        desc = 'deleted matrix'
+    },
+    fmta(
+    [[ {\tilde{<>}}_{1<>}]],
+    {
+        i(1), i(2)
+    }
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+s(
+    {
+        trig = 'lq',
+        desc = 'leq',
+        snippetType = 'autosnippet'
+    },
+    fmta(
+    [[\leq]],{}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+s(
+    {
+        trig = 'cc',
+        desc = 'cdot',
+        snippetType = 'autosnippet'
+    },
+    fmta(
+        [[\cdot]], {}
+    ),
+    {
+        condition = in_mathzone 
+    }
+),
+
+s(
+    {
+        trig = 'nq',
+        snippetType = 'autosnippet'
+    },
+    fmta(
+        [[\neq]],
+        {}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+s(
+    {
+        trig = 'dm',
+    },
+    fmta(
+    [[
+        \begin{pmatrix} 
+        <> & 0 & \cdots & 0 \\
+        0  & <> & \cdots & 0 \\
+        \vdots & \vdots &   & \vdots \\  
+        0 & 0 & \cdots & <>
+        \end{pmatrix}
+    ]],
+    {i(1), i(2), i(3)}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
 
 
 }
