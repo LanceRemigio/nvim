@@ -61,3 +61,6 @@ km('n', '<leader>t', ':term <cr>', {noremap = true})
 
 km('n', '<leader>ns' ,'<cmd> nohlsearch <cr>', {noremap = true} )
 
+km('n', '<leader>as', ':ASToggle <cr>', {noremap = true})
+
+

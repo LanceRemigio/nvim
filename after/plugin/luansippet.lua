@@ -29,11 +29,16 @@ vim.keymap.set('i', 'jj', function()
         end
     end, {noremap = true, silent = true})
 -- listing choice of snippets to choose from
+
 vim.keymap.set('i', '<c-l>', function()
         if ls.choice_active() then
             ls.change_choice(1)
         end
     end)
 
-vim.keymap.set('n', '<Leader><leader>s', ':lua require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/LuaSnip/"})<CR>')
+vim.keymap.set('n',
+        '<Leader><leader>s',
+        ':lua require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/LuaSnip/"})<CR>'
+        )
+
 

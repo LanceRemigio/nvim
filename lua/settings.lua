@@ -2,7 +2,7 @@ local set = vim.opt
 local let = vim.g
 
 
-set.guicursor = ""
+-- set.guicursor = ""
 let.mapleader = ' '
 set.number = true 
 set.relativenumber = true 

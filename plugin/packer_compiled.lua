@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/lance/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?.lua;/home/lance/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?/init.lua;/home/lance/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?.lua;/home/lance/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/lance/.cache/nvim/packer_hererocks/2.1.1692716794/lib/lua/5.1/?.so"
+local package_path_str = "/home/lance/.cache/nvim/packer_hererocks/2.1.1713484068/share/lua/5.1/?.lua;/home/lance/.cache/nvim/packer_hererocks/2.1.1713484068/share/lua/5.1/?/init.lua;/home/lance/.cache/nvim/packer_hererocks/2.1.1713484068/lib/luarocks/rocks-5.1/?.lua;/home/lance/.cache/nvim/packer_hererocks/2.1.1713484068/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/lance/.cache/nvim/packer_hererocks/2.1.1713484068/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/arctic.nvim",
     url = "https://github.com/rockyzhang24/arctic.nvim"
   },
+  ["base16-nvim"] = {
+    loaded = true,
+    path = "/home/lance/.local/share/nvim/site/pack/packer/start/base16-nvim",
+    url = "https://github.com/RRethy/base16-nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -109,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["gruvbox.nvim"] = {
+    loaded = true,
+    path = "/home/lance/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
+    url = "https://github.com/ellisonleao/gruvbox.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -118,11 +128,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
     url = "https://github.com/rebelot/kanagawa.nvim"
-  },
-  knap = {
-    loaded = true,
-    path = "/home/lance/.local/share/nvim/site/pack/packer/start/knap",
-    url = "https://github.com/frabjous/knap"
   },
   ["lspkind.nvim"] = {
     loaded = true,
@@ -144,20 +149,25 @@ _G.packer_plugins = {
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
-  ["melange-nvim"] = {
+  ["mason-lspconfig.nvim"] = {
     loaded = true,
-    path = "/home/lance/.local/share/nvim/site/pack/packer/start/melange-nvim",
-    url = "https://github.com/savq/melange-nvim"
+    path = "/home/lance/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/home/lance/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["material.nvim"] = {
+    loaded = true,
+    path = "/home/lance/.local/share/nvim/site/pack/packer/start/material.nvim",
+    url = "https://github.com/marko-cerovac/material.nvim"
   },
   ["nightfox.nvim"] = {
     loaded = true,
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
     url = "https://github.com/EdenEast/nightfox.nvim"
-  },
-  ["nordic.nvim"] = {
-    loaded = true,
-    path = "/home/lance/.local/share/nvim/site/pack/packer/start/nordic.nvim",
-    url = "https://github.com/andersevenrud/nordic.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -169,10 +179,10 @@ _G.packer_plugins = {
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
-  ["nvim-lsp-installer"] = {
+  ["nvim-jellybeans"] = {
     loaded = true,
-    path = "/home/lance/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
-    url = "https://github.com/williamboman/nvim-lsp-installer"
+    path = "/home/lance/.local/share/nvim/site/pack/packer/start/nvim-jellybeans",
+    url = "https://github.com/kabouzeid/nvim-jellybeans"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -228,11 +238,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lance/.local/share/nvim/site/pack/packer/start/vim-dadbod-ui",
     url = "https://github.com/kristijanhusak/vim-dadbod-ui"
-  },
-  ["vim-devicons"] = {
-    loaded = true,
-    path = "/home/lance/.local/share/nvim/site/pack/packer/start/vim-devicons",
-    url = "https://github.com/ryanoasis/vim-devicons"
   },
   vimtex = {
     loaded = true,

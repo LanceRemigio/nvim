@@ -5,7 +5,7 @@ This setup is optimized for writing notes and doing homework in LaTeX.
 * OS: Ubuntu 22.03
 * Termimal: Alacritty
 * Font in Screenshot: FiraCode https://www.nerdfonts.com/font-downloads
-* Colorscheme: Rose Pine
+* Colorscheme: Gruvbox Material
 * PDF Viewer: Sioyek/Zathura (or SumatraPDF if you're on Windows)
 * Snippets: Luasnip
 * Completion: nvim-cmp

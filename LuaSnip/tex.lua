@@ -31,11 +31,16 @@ s({trig = 'md', snippetType = "autosnippet"}, fmta('\\[ <> \\]', {i(1)})),
 
 s({trig =  'bpr', snippetType = 'autosnippet'}, fmta('\\Big( <> \\Big)', {i(1)})),
 
-s('bld', fmta('\\textbf{<>}', {i(1)})),
+s(
+    {trig = 'bld', snippetType = 'autosnippet'},
+    fmta(
+        '\\textbf{<>}', {i(1)}
+        )
+),
 
-s('it', fmta('\\textit{<>} ', {i(1)})),
+s({ trig = 'it'}, fmta('\\textit{<>} ', {i(1)}) ),
 
-s({trig = "lim", snippetType = "autosnippet"}, fmta("\\lim_{ <> \\to <> } ", {i(1), i(2)}), {condition = in_mathzone}),
+s({trig = "lim"}, fmta("\\lim_{ <> \\to <> } ", {i(1), i(2)}), {condition = in_mathzone}),
 
 s(
     {
@@ -129,7 +134,7 @@ s({trig = 'bb', snippetType = 'autosnippet'}, fmta('\\Big[ <> \\Big]', {i(1)}), 
 
 s({trig = 'bga', snippetType = 'autosnippet'}, fmta('\\Big| <> \\Big| ', {i(1)}), {condition = in_mathzone}  ),
 
-s({trig = 'lm', snippetType = 'autosnippet'}, fmta('\\lim <>', {i(1)})),
+-- s({trig = 'lm', snippetType = 'autosnippet'}, fmta('\\lim <>', {i(1)})),
 
 s({trig = 'sum', snippetType = 'autosnippet'}, fmta('\\sum <>', {i(1)}), {condition = in_mathzone}),
 
@@ -137,16 +142,21 @@ s(
     {
         trig = 'sp', 
     }, 
-    fmta('\\sup <>', {i(1)}), 
+    fmta('\\sup_{<>}', {i(1)}), 
     {
         condition = in_mathzone
     }),
 
-s({ trig = 'dd', snippetType = 'autosnippet'}, fmta("\\frac{d <> }{d <> } ", {i(1), i(2)})),
+s(
+    {trig = 'dd'},
+    fmta("\\frac{d <> }{d <> } ",
+    {i(1), i(2)}
+    )
+),
 
 s(
     {
-    trig = 'pp', snippetType = 'autosnippet'
+    trig = 'par'
     }, 
     fmta(
     "\\frac{\\partial <> }{\\partial <> } ",
@@ -162,7 +172,7 @@ s(
 
 s({trig = 'int', snippetType = 'autosnippet'}, fmta("\\int_{ <> }^{ <> } <> \\ d<>", {i(1), i(2),i(3),i(4)}), {condition = in_mathzone}),
 
-s({trig = 'ify', snippetType = 'autosnippet'}, fmta( "\\infty <>", {i(1)}), {condition = in_mathzone}),
+s({trig = 'oo', snippetType = 'autosnippet'}, fmta( "\\infty <>", {i(1)}), {condition = in_mathzone}),
 
 s({trig = 'gt', snippetType = 'autosnippet'}, fmta("\\geq <>", {i(1)}), {condition = in_mathzone}),
 
@@ -180,7 +190,7 @@ s({trig = 'epy', snippetType = 'autosnippet'}, fmta("\\emptyset", {}), {conditio
 s({trig = 'cp', snippetType = 'autosnippet'}, fmta("(<> \\circ <>)(<>)", {i(1), i(2), i(3)}), {condition  = in_mathzone}),
 
 
-s({trig = 'nn', snippetType = 'autosnippet'}, fmta("\\lVert <> \\rVert", {i(1)}), {condition = in_mathzone}),
+-- s({trig = 'nn'}, fmta("\\lVert <> \\rVert", {i(1)}), {condition = in_mathzone}),
 
 s(
     { 
@@ -680,9 +690,7 @@ s(
         desc = 'Parentheses Matrix'
     },
     fmta(
-        [[ \begin{pmatrix} 
-            <>
-           \end{pmatrix} 
+        [[ \begin{pmatrix} <> \end{pmatrix} 
         ]],
         {
             i(1)
@@ -836,6 +844,400 @@ s(
         condition = in_mathzone
     }
 ),
+
+s(
+    {
+        trig = 'op'
+    },
+    fmta(
+        [[\oplus]],
+        {}
+        ),{
+            condition = in_mathzone
+        }
+),
+
+s(
+
+    {
+        trig = 'gma',
+        snippetType = 'autosnippet'
+
+    },
+    fmta(
+        [[\gamma]],
+        {}
+        ),{
+            condition = in_mathzone
+        }
+),
+
+s(
+    {
+        trig = 'pp',
+        snippetType = 'autosnippet'
+    },
+    fmta(
+        [[\langle <> , <> \rangle]], {i(1), i(2)}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+
+s(
+    {
+        trig = 'nn',
+        snippetType = 'autosnippet'
+    },
+    fmta(
+        [[\|<>\|]],
+        {i(1)}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+s(
+    {
+        trig = 'ovr',
+        snippetType = 'autosnippet'
+    },
+    fmta(
+    [[\overline{<>}]], {i(1)}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+s(
+    {
+        trig = 'mx',
+        snippetType = 'autosnippet'
+    },
+    fmta(
+        [[\max\limits_{<>}<>]], {i(1), i(2)}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+s(
+    {
+        trig = 'bpp',
+        snippetType = 'autosnippet'
+    },
+    fmta(
+    [[\Big\langle <>, <> \Big\rangle]], {i(1), i(2)}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+s(
+    {
+        trig = 'bnn',
+        snippetType = 'autosnippet'
+    },
+    fmta(
+    [[\Big\|<>\Big\|]], {i(1)}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+s(
+    {
+        trig = 'bpp',
+        snippetType = 'autosnippet'
+    },
+    fmta(
+        [[\Big\langle <>, <> \Big\rangle]], {i(1), i(2)}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+s(
+    {
+        trig = 'bcd',
+        snippetType = 'autosnippet'
+    },
+    fmta(
+        [[\boldsymbol{\cdot}]], {}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+s(
+    {
+        trig = 'ifu', 
+        snippetType = 'autosnippet'
+    },
+    fmta(
+        [[\inf_{<>}]], {i(1)}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+s(
+    {
+        trig = 'db',
+        snippetType = 'autosnippet'
+    },
+    fmta(
+        [[{<>}_{<>,<>}]], {i(1), i(2), i(3)}
+    ),
+    {
+        condition = in_mathzone
+    }
+
+
+
+),
+
+s(
+    {
+        trig = 'mc',
+        snippetType = 'autosnippet'
+    },
+    fmta(
+    [[\mathcal{<>}]], {i(1)}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+-- s(
+--     {
+--         trig = 'cos',
+--     },
+--     fmta(
+--         [[\cos<>]], {i(1)}
+--         ),
+--         {
+--             condition = in_mathzone
+--         }
+--
+-- ),
+--
+--
+-- s(
+--     {
+--         trig = 'sin',
+--     },
+--     fmta(
+--         [[\sin<>]], {i(1)}
+--         ),
+--         {
+--             condition = in_mathzone
+--         }
+--
+-- ),
+
+s(
+    {
+        trig = 'vp',
+        snippetType = 'autosnippet'
+    },
+    fmta(
+        [[\varphi]], {}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+s(
+
+    {
+        trig = 'ap',
+    },
+    fmta(
+        [[\alpha]], {}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+
+s(
+
+    {
+        trig = 'bt',
+    },
+    fmta(
+        [[\beta]], {}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+
+s(
+    {
+        trig = 'prb'
+    },
+    fmta(
+        [[\section{Problem <>}]], {i(1)}
+    )
+),
+
+
+s(
+    {
+        trig = 'ee',
+        snippetType = 'autosnippet'
+    },
+    fmta(
+        [[=]], { }
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+s(
+    {
+        trig = 'pw',
+        snippetType = 'autosnippet'
+    },
+    fmta(
+        [[
+            \begin{cases}
+            <> &\text{if} \ <> \\
+            <> &\text{if} \ <>
+            \end{cases}
+        ]], 
+        {i(1), i(2), i(3), i(4)}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+s(
+    {
+        trig = 'lr',
+        snippetType = 'autosnippet'
+    },
+    fmta(
+        [[\Longrightarrow]], {}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+s(
+    {
+        trig = 'Lba',
+        snippetType = 'autosnippet'
+    },
+    fmta(
+        [[\Lambda]], {}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+s(
+    {
+        trig = 'ocg'
+    },
+    fmta(
+        [[
+            \begin{ocg}{<>}{<>}{<>}
+            <>
+            \end{ocg}
+            \newline
+            \switchocg{<>}{\textbf{Click here for the definition}}
+        ]], {i(1), i(2), i(3), i(4), i(5)}
+    )
+),
+
+s(
+    {
+        trig = 'dint'
+    },
+    fmta(
+        [[
+            \displaystyle \int_{<>}^{<>} <> \ d <>
+        ]], {i(1), i(2), i(3), i(4)}
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+
+s(
+    {
+        trig = 'lsp'
+    },
+    fmta(
+        [[\lim \sup <>]], 
+        {
+            i(1)
+        }
+        ),
+        {
+            condition = in_mathzone
+        }
+),
+
+s(
+    {
+        trig = 'lif'
+    },
+    fmta(
+            [[\lim \inf <>]],
+            {
+                i(1)
+            }
+    ),
+    {
+        condition = in_mathzone
+    }
+),
+
+s(
+    {
+        trig = 'stp'
+    },
+    fmta(
+            [[
+                \documentclass[<>]{<>}
+                \input{<>}
+                \begin{document}
+                <>
+                \end{document}
+
+            ]], 
+            {
+                i(1), i(2), i(3), i(4)
+            }
+            )
+),
+
+
+
+
 
 
 }

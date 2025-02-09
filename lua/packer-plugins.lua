@@ -14,14 +14,18 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
     -- Functionality -- 
     use 'wbthomason/packer.nvim'
-    use 'williamboman/nvim-lsp-installer'
-    use 'neovim/nvim-lspconfig'
     use 'nvim-lua/plenary.nvim'
+    use {
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
+    }
     use 'kyazdani42/nvim-web-devicons'
     use 'nvim-treesitter/nvim-treesitter'
     use 'glepnir/lspsaga.nvim'
     use 'onsails/lspkind.nvim'
     use 'andweeb/presence.nvim'
+    -- use 'pocco81/auto-save.nvim'
     use({
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
@@ -35,15 +39,15 @@ return require('packer').startup(function(use)
     }
     -- Themes/UI elements
     use 'EdenEast/nightfox.nvim'
-    use 'navarasu/onedark.nvim'
-    use 'savq/melange-nvim'
+    use 'shaunsingh/nord.nvim'
     use 'sainnhe/gruvbox-material'
     use 'rebelot/kanagawa.nvim'
-    use 'rmehri01/onenord.nvim'
+    -- use 'RRethy/base16-nvim'
     use {
         "rockyzhang24/arctic.nvim",
         requires = { "rktjmp/lush.nvim" }
     }
+    use 'kepano/flexoki-neovim'
     -- Tools --
     use 'tpope/vim-commentary'
     use 'hrsh7th/cmp-nvim-lsp'
@@ -57,6 +61,13 @@ return require('packer').startup(function(use)
     use 'lervag/vimtex'
     use 'tpope/vim-dadbod'
     use 'kristijanhusak/vim-dadbod-ui'
+    -- random --
+    use {
+        'nvzone/typr',
+        requires = {
+            'nvzone/volt'
+        }
+}
  if packer_bootstrap then
     require('packer').sync()
  end
